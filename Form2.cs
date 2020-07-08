@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace GestiónModelo
 {
-    public partial class Inicio : Form
+    public partial class Sesión : Form
     {
-        public Inicio()
+        public Sesión()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
