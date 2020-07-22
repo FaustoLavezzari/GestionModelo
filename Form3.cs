@@ -17,9 +17,14 @@ namespace GestiónModelo
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void CreadorDeSesion_Load(object sender, EventArgs e)
         {
-
+            string paises = Properties.Resources.paises;
+            List<string> lista = paises.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            foreach (string pais in lista)
+            {
+                seleccionadorDePaises.Items.Add(pais);
+            }
         }
     }
 }

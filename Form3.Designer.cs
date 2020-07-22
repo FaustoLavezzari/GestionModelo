@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.seleccionadorDePaises = new System.Windows.Forms.CheckedListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -43,10 +43,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.checkedListBox1);
+            this.panel1.Controls.Add(this.seleccionadorDePaises);
             this.panel1.Location = new System.Drawing.Point(25, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(338, 255);
+            this.panel1.Size = new System.Drawing.Size(338, 454);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -58,13 +58,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Delegaciones";
             // 
-            // checkedListBox1
+            // seleccionadorDePaises
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(16, 59);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(301, 184);
-            this.checkedListBox1.TabIndex = 1;
+            this.seleccionadorDePaises.CheckOnClick = true;
+            this.seleccionadorDePaises.FormattingEnabled = true;
+            this.seleccionadorDePaises.Location = new System.Drawing.Point(16, 59);
+            this.seleccionadorDePaises.Name = "seleccionadorDePaises";
+            this.seleccionadorDePaises.Size = new System.Drawing.Size(301, 379);
+            this.seleccionadorDePaises.TabIndex = 1;
             // 
             // panel2
             // 
@@ -99,7 +100,6 @@
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Añadir Tópico";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -131,7 +131,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox seleccionadorDePaises;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBox1;
