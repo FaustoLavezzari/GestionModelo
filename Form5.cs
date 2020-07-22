@@ -12,14 +12,22 @@ namespace GestiónModelo
 {
     public partial class Form5 : Form
     {
+        Form6 prom;
         int totalSegundos;
+        int minutos;
+        int segundos;
+        Estrado estrado;
         public Form5()
         {
             InitializeComponent();
         }
+      
         private void Form5_Load(object sender, EventArgs e)
         {
             totalSegundos = 0;
+            estrado = new Estrado();
+            prom = new Form6();
+            prom.Show();
             pausar.Enabled = false;
             comenzar.Enabled = true;
             resetear.Enabled = false;
@@ -40,13 +48,18 @@ namespace GestiónModelo
         }
         private void resetear_Click(object sender, EventArgs e)
         {
-
             comenzar.Enabled = true;
             pausar.Enabled = false;
             resetear.Enabled = false;
-            totalSegundos = 0;
             this.timer1.Enabled = false;
             this.reloj.Text = "00" + ":" + "00";
+            estrado.addTime(totalSegundos);
+            totalSegundos = 0;
+            estrado.aumentarContador_del();
+            minutos = (int)getTiempoProm() / 60;
+            segundos = (int)(getTiempoProm() / 60 + getTiempoProm());
+            prom.reloj.Text = minutos.ToString("00") + ":" + segundos.ToString("00");
+            prom.Show();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -71,7 +84,12 @@ namespace GestiónModelo
             {
                 this.reloj.Text = minutos.ToString("00") + ":" + segundos.ToString("00");
             }
-        }   
+        }
+
+        public double getTiempoProm() 
+        {
+            return Math.Round(estrado.getSumaTiempos()/estrado.getContador_del());
+        }
         
     }
 }

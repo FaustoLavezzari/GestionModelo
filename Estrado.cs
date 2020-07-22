@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GestiónModelo
 {
@@ -12,18 +13,37 @@ namespace GestiónModelo
         private Delegacion en_estrado;
         //private int tiempo_discurso;
         private int tiempo_estrado;
-        private int tiempo_promedio;
+        private double sumaTiempos = 0;
         private int contador_del = 0;
 
-        Estrado(Delegacion en_estrado, int tiempo_discurso){
-            this.en_estrado = en_estrado;
+        public Estrado(){
+            //Delegacion en_estrado
+            //this.en_estrado = en_estrado;
         }
-   
-    //void timerUp()
-    //void calcularProm()
-    //void reset()
-    //int getTiempoDiscurso()
-    //int getTiempoEstrado()
-    //int getTiempoPromedio()
-}
+        public void addTime(int tiempo) {
+           sumaTiempos += tiempo;
+        }
+
+        public void aumentarContador_del() 
+        {
+            contador_del++;
+        }
+
+        public double getSumaTiempos()
+        {
+            return sumaTiempos;
+        }
+
+        public int getContador_del() 
+        {
+            return contador_del;
+        }
+
+        //void timerUp()
+        //void calcularProm()
+        //void reset()
+        //int getTiempoDiscurso()
+        //int getTiempoEstrado()
+        //int getTiempoPromedio()
+    }
 }
