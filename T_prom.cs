@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestiónModelo
 {
-    public partial class Form6 : Form
+    public partial class T_prom : Form
     {
-        public Form6()
+        public T_prom()
         {
             InitializeComponent();
         }

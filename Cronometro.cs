@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace GestiónModelo
 {
-    public partial class Form5 : Form
+    public partial class Cronometro : Form
     {
-        Form6 prom;
+        T_prom prom;
         int totalSegundos;
         int minutos;
         int segundos;
         Estrado estrado;
-        public Form5()
+        public Cronometro()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace GestiónModelo
         {
             totalSegundos = 0;
             estrado = new Estrado();
-            prom = new Form6();
+            prom = new T_prom();
             prom.Show();
             pausar.Enabled = false;
             comenzar.Enabled = true;

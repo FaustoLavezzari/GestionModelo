@@ -1,6 +1,6 @@
 ﻿namespace GestiónModelo
 {
-    partial class Form4
+    partial class Temporizador
     {
         /// <summary>
         /// Variable del diseñador necesaria.

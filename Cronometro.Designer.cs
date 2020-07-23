@@ -1,6 +1,6 @@
 ﻿namespace GestiónModelo
 {
-    partial class Form5
+    partial class Cronometro
     {
         /// <summary>
         /// Required designer variable.

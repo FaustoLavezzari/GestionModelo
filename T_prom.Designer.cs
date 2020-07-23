@@ -1,6 +1,6 @@
 ﻿namespace GestiónModelo
 {
-    partial class Form6
+    partial class T_prom
     {
         /// <summary>
         /// Required designer variable.

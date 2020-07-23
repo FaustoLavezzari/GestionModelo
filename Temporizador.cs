@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace GestiónModelo
 {
-    public partial class Form4 : Form
+    public partial class Temporizador : Form
     {
         private int totalSegundos;
-        public Form4()
+        public Temporizador()
         {
             InitializeComponent();
         }
