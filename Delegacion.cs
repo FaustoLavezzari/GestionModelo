@@ -13,17 +13,13 @@ namespace GestiónModelo
         private String nombre;
         private int interpelaciones;
         private int pregResp;
-        private Image bandera;
-        private bool discurso;
         private bool asistencia;
         private Valoracion valoracion;
 
-        public Delegacion(String nombre, Image bandera) {
+        public Delegacion(String nombre) {
             this.nombre = nombre;
             interpelaciones = 0;
             pregResp = 0;
-            this.bandera = bandera;
-            discurso = false;
             asistencia = false;
             valoracion = new Valoracion(); 
         }
@@ -33,7 +29,6 @@ namespace GestiónModelo
         
         //seters
 
-        public void setDiscurso() { discurso = true;  }
         public void setAsistencia() { asistencia = true;  }
         // si se va usar un boton o algo para cambiar la asistencia para evitar errores podriamos negarla,
         //asistemcia=!asistencia; o ponerle como parametro true o false por si se quivoca el usuario
@@ -44,7 +39,6 @@ namespace GestiónModelo
         public String getNombre() { return nombre; }
         public int getInterpelaciones() { return interpelaciones; }
         public int getPregResp() { return pregResp; }
-        public bool getDiscurso() { return discurso; }
         public bool getAsistencia() { return asistencia; }
     }
 }
