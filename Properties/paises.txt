@@ -1,4 +1,4 @@
-Afganistán
+Afganistan
 Albania
 Alemania
 Andorra
@@ -10,27 +10,27 @@ Argentina
 Armenia
 Australia
 Austria
-Azerbaiyán
+Azerbaiyan
 Bahamas
 Bahrein
 Bangladesh
 Barbados
-Belarús
-Bélgica
+Belarus
+Belgica
 Belice
 Benin
-Bhután
+Bhutan
 Bolivia
 Bosnia y Herzegovina
 Botswana
 Brasil
-Brunei Darussalam
+Brunei
 Bulgaria
 Burkina Faso
 Burundi
 Cabo Verde
 Camboya
-Camerún
+Camerun
 Canadá
 Chad
 Chile
@@ -40,7 +40,7 @@ Colombia
 Comoras
 Congo
 Costa Rica
-Côte d'Ivoire
+Costa de Marfil
 Croacia
 Cuba
 Dinamarca
@@ -49,21 +49,21 @@ Dominica
 Ecuador
 Egipto
 El Salvador
-Emiratos Árabes Unidos
+Emiratos Arabes Unidos
 Eritrea
 Eslovaquia
 Eslovenia
 España
-Estados Unidos de América
+Estados Unidos de America
 Estonia
 Eswatini
-Etiopía
-Federación de Rusia
+Etiopia
+Rusia
 Fiji
 Filipinas
 Finlandia
 Francia
-Gabón
+Gabon
 Gambia
 Georgia
 Ghana
@@ -74,30 +74,30 @@ Guinea
 Guinea Bissau
 Guinea Ecuatorial
 Guyana
-Haití
+Haiti
 Honduras
-Hungría
+Hungria
 India
 Indonesia
-Irán
+Iran
 Iraq
 Irlanda
 Islandia
 Islas Marshall
-Islas Salomón
+Islas Salomon
 Israel
 Italia
 Jamaica
-Japón
+Japon
 Jordania
-Kazajstán
+Kazajstan
 Kenya
-Kirguistán
+Kirguistan
 Kiribati
 Kuwait
 Lesotho
 Letonia
-Líbano
+Libano
 Liberia
 Libia
 Liechtenstein
@@ -108,14 +108,14 @@ Madagascar
 Malasia
 Malawi
 Maldivas
-Malí
+Mali
 Malta
 Marruecos
 Mauricio
 Mauritania
-México
+Mexico
 Micronesia
-Mónaco
+Monaco
 Mongolia
 Montenegro
 Mozambique
@@ -128,36 +128,36 @@ Niger
 Nigeria
 Noruega
 Nueva Zelandia
-Omán
-Países Bajos
-Pakistán
+Oman
+Paises Bajos
+Pakistan
 Palau
-Panamá
+Panama
 Papua Nueva Guinea
 Paraguay
-Perú
+Peru
 Polonia
 Portugal
 Qatar
 Reino Unido de Gran Bretaña e Irlanda del Norte
-República Árabe Siria
-República Centroafricana
-República Checa
-República de Corea
-República de Moldova
-República Democrática del Congo
-República Democrática Popular Lao
-República Dominicana
-República Popular Democrática de Corea
-República Unida de Tanzanía
+Siria
+Republica Centroafricana
+Republica Checa
+Republica de Corea
+Republica de Moldova
+República Democratica del Congo
+República Democratica Popular Lao
+Republica Dominicana
+Republica Popular Democratica de Corea
+Republica Unida de Tanzania
 Rumania
 Rwanda
 Saint Kitts y Nevis
 Samoa
 San Marino
 San Vicente y las Granadinas
-Santa Lucía
-Santo Tomé y Príncipe
+Santa Lucia
+Santo Tome y Principe
 Senegal
 Serbia
 Seychelles
@@ -165,29 +165,29 @@ Sierra Leona
 Singapur
 Somalia
 Sri Lanka
-Sudáfrica
-Sudán
-Sudán del Sur
+Sudafrica
+Sudan
+Sudan del Sur
 Suecia
 Suiza
 Suriname
 Tailandia
-Tayikistán
+Tayikistan
 Timor-Leste
 Togo
 Tonga
-Trinidad yTobago
-Túnez
-Turkmenistán
-Turquía
+Trinidad y Tobago
+Tunez
+Turkmenistan
+Turquia
 Tuvalu
 Ucrania
 Uganda
 Uruguay
-Uzbekistán
+Uzbekistan
 Vanuatu
 Venezuela
-Viet Nam
+Vietnam
 Yemen
 Zambia
 Zimbabwe
