@@ -32,12 +32,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.seleccionadorDePaises = new System.Windows.Forms.CheckedListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AñadirDelegacion = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DelegacionesAñadidas = new System.Windows.Forms.ListBox();
+            this.NombreDelegacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AñadirTopico = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TopicosAñadidos = new System.Windows.Forms.ListBox();
+            this.NombreTopico = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CrearSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,50 +78,132 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.listBox1);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.AñadirDelegacion);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.DelegacionesAñadidas);
+            this.panel2.Controls.Add(this.NombreDelegacion);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(414, 28);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(311, 114);
             this.panel2.TabIndex = 1;
             // 
-            // listBox1
+            // AñadirDelegacion
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(21, 59);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(260, 43);
-            this.listBox1.TabIndex = 2;
+            this.AñadirDelegacion.Location = new System.Drawing.Point(216, 33);
+            this.AñadirDelegacion.Name = "AñadirDelegacion";
+            this.AñadirDelegacion.Size = new System.Drawing.Size(65, 23);
+            this.AñadirDelegacion.TabIndex = 4;
+            this.AñadirDelegacion.Text = "Añadir";
+            this.AñadirDelegacion.UseVisualStyleBackColor = true;
+            this.AñadirDelegacion.Click += new System.EventHandler(this.AñadirNuevaDelegacion);
             // 
-            // textBox2
+            // label4
             // 
-            this.textBox2.Location = new System.Drawing.Point(55, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 20);
-            this.textBox2.TabIndex = 1;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Nombre";
+            // 
+            // DelegacionesAñadidas
+            // 
+            this.DelegacionesAñadidas.FormattingEnabled = true;
+            this.DelegacionesAñadidas.Location = new System.Drawing.Point(21, 59);
+            this.DelegacionesAñadidas.Name = "DelegacionesAñadidas";
+            this.DelegacionesAñadidas.Size = new System.Drawing.Size(260, 43);
+            this.DelegacionesAñadidas.TabIndex = 2;
+            // 
+            // NombreDelegacion
+            // 
+            this.NombreDelegacion.Location = new System.Drawing.Point(71, 33);
+            this.NombreDelegacion.Name = "NombreDelegacion";
+            this.NombreDelegacion.Size = new System.Drawing.Size(139, 20);
+            this.NombreDelegacion.TabIndex = 1;
+            this.NombreDelegacion.TextChanged += new System.EventHandler(this.ChequeoTexto);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(110, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Añadir Tópico";
+            this.label3.Text = "Añadir Delegacion";
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(414, 167);
+            this.panel3.Controls.Add(this.AñadirTopico);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.TopicosAñadidos);
+            this.panel3.Controls.Add(this.NombreTopico);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(414, 169);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(311, 42);
+            this.panel3.Size = new System.Drawing.Size(311, 114);
             this.panel3.TabIndex = 2;
+            // 
+            // AñadirTopico
+            // 
+            this.AñadirTopico.Location = new System.Drawing.Point(216, 30);
+            this.AñadirTopico.Name = "AñadirTopico";
+            this.AñadirTopico.Size = new System.Drawing.Size(65, 23);
+            this.AñadirTopico.TabIndex = 5;
+            this.AñadirTopico.Text = "Añadir";
+            this.AñadirTopico.UseVisualStyleBackColor = true;
+            this.AñadirTopico.Click += new System.EventHandler(this.AñadirNuevoTopico);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Nombre";
+            // 
+            // TopicosAñadidos
+            // 
+            this.TopicosAñadidos.FormattingEnabled = true;
+            this.TopicosAñadidos.Location = new System.Drawing.Point(21, 59);
+            this.TopicosAñadidos.Name = "TopicosAñadidos";
+            this.TopicosAñadidos.Size = new System.Drawing.Size(260, 43);
+            this.TopicosAñadidos.TabIndex = 2;
+            // 
+            // NombreTopico
+            // 
+            this.NombreTopico.Location = new System.Drawing.Point(71, 33);
+            this.NombreTopico.Name = "NombreTopico";
+            this.NombreTopico.Size = new System.Drawing.Size(139, 20);
+            this.NombreTopico.TabIndex = 1;
+            this.NombreTopico.TextChanged += new System.EventHandler(this.ChequeoTexto);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(110, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Añadir Tópico";
+            // 
+            // CrearSesion
+            // 
+            this.CrearSesion.Location = new System.Drawing.Point(473, 351);
+            this.CrearSesion.Name = "CrearSesion";
+            this.CrearSesion.Size = new System.Drawing.Size(172, 70);
+            this.CrearSesion.TabIndex = 3;
+            this.CrearSesion.Text = "Crear Sesión";
+            this.CrearSesion.UseVisualStyleBackColor = true;
+            this.CrearSesion.Click += new System.EventHandler(this.CrearNuevaSesion);
             // 
             // CreadorDeSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 494);
+            this.Controls.Add(this.CrearSesion);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -123,6 +214,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -133,9 +226,17 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox seleccionadorDePaises;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox NombreDelegacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox DelegacionesAñadidas;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ListBox TopicosAñadidos;
+        private System.Windows.Forms.TextBox NombreTopico;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button CrearSesion;
+        private System.Windows.Forms.Button AñadirDelegacion;
+        private System.Windows.Forms.Button AñadirTopico;
     }
 }

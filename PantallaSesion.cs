@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace GestiónModelo
 {
-    public partial class Sesión : Form
+    public partial class PantallaSesion : Form
     {
-        public Sesión()
+        private Sesion sesion;
+        public PantallaSesion(Sesion sesion)
         {
+            this.sesion = sesion;
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
