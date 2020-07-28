@@ -35,15 +35,16 @@
             this.pausar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.resetear = new System.Windows.Forms.Button();
+            this.panel_prom = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // titulo
             // 
             this.titulo.AutoSize = true;
-            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titulo.Location = new System.Drawing.Point(21, 9);
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Location = new System.Drawing.Point(6, 9);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(267, 31);
+            this.titulo.Size = new System.Drawing.Size(214, 25);
             this.titulo.TabIndex = 0;
             this.titulo.Text = "Tiempo en el estrado";
             // 
@@ -51,7 +52,7 @@
             // 
             this.reloj.AutoSize = true;
             this.reloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reloj.Location = new System.Drawing.Point(55, 61);
+            this.reloj.Location = new System.Drawing.Point(12, 48);
             this.reloj.Name = "reloj";
             this.reloj.Size = new System.Drawing.Size(200, 76);
             this.reloj.TabIndex = 1;
@@ -59,10 +60,10 @@
             // 
             // comenzar
             // 
-            this.comenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comenzar.Location = new System.Drawing.Point(12, 188);
+            this.comenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comenzar.Location = new System.Drawing.Point(12, 133);
             this.comenzar.Name = "comenzar";
-            this.comenzar.Size = new System.Drawing.Size(85, 37);
+            this.comenzar.Size = new System.Drawing.Size(63, 37);
             this.comenzar.TabIndex = 2;
             this.comenzar.Text = "Start";
             this.comenzar.UseVisualStyleBackColor = true;
@@ -70,10 +71,10 @@
             // 
             // pausar
             // 
-            this.pausar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pausar.Location = new System.Drawing.Point(112, 188);
+            this.pausar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pausar.Location = new System.Drawing.Point(81, 133);
             this.pausar.Name = "pausar";
-            this.pausar.Size = new System.Drawing.Size(85, 37);
+            this.pausar.Size = new System.Drawing.Size(63, 37);
             this.pausar.TabIndex = 3;
             this.pausar.Text = "Pause";
             this.pausar.UseVisualStyleBackColor = true;
@@ -86,26 +87,35 @@
             // 
             // resetear
             // 
-            this.resetear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetear.Location = new System.Drawing.Point(212, 188);
+            this.resetear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetear.Location = new System.Drawing.Point(149, 133);
             this.resetear.Name = "resetear";
-            this.resetear.Size = new System.Drawing.Size(85, 37);
+            this.resetear.Size = new System.Drawing.Size(63, 37);
             this.resetear.TabIndex = 4;
             this.resetear.Text = "Reset";
             this.resetear.UseVisualStyleBackColor = true;
             this.resetear.Click += new System.EventHandler(this.resetear_Click);
             // 
-            // Form5
+            // panel_prom
+            // 
+            this.panel_prom.Location = new System.Drawing.Point(1, 176);
+            this.panel_prom.Name = "panel_prom";
+            this.panel_prom.Size = new System.Drawing.Size(225, 129);
+            this.panel_prom.TabIndex = 5;
+            // 
+            // Cronometro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 247);
+            this.ClientSize = new System.Drawing.Size(225, 317);
+            this.Controls.Add(this.panel_prom);
             this.Controls.Add(this.resetear);
             this.Controls.Add(this.pausar);
             this.Controls.Add(this.comenzar);
             this.Controls.Add(this.reloj);
             this.Controls.Add(this.titulo);
-            this.Name = "Form5";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Cronometro";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.ResumeLayout(false);
@@ -121,5 +131,6 @@
         private System.Windows.Forms.Button pausar;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button resetear;
+        private System.Windows.Forms.Panel panel_prom;
     }
 }

@@ -18,23 +18,29 @@ namespace GestiónModelo
             InitializeComponent();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Start_Click_1(object sender, EventArgs e)
         {
-            this.button1.Enabled = false;
-            this.button2.Enabled = true;
-
-            int minutos = int.Parse(minbox.Text);
-            int segundos = int.Parse(segbox.Text);
-
-            totalSegundos = (minutos * 60) + segundos;
-
-            this.timer1.Enabled = true;
+            this.btn_start.Enabled = false;
+            this.btn_stop.Enabled = true;
+            int minutos = 0;
+            int segundos = 0;
+            if (Int32.TryParse(minbox.Text,out minutos) && Int32.TryParse(segbox.Text, out segundos))
+            {
+                totalSegundos = (minutos * 60) + segundos;
+                this.timer1.Enabled = true;
+            }
+            else
+            {                
+                MessageBox.Show("Por favor ingrese algún valor válido");
+                this.btn_stop.Enabled = false;
+                this.btn_start.Enabled = true;
+            }            
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void Stop_Click_1(object sender, EventArgs e)
         {
-            this.button2.Enabled = false;
-            this.button1.Enabled = true;
+            this.btn_stop.Enabled = false;
+            this.btn_start.Enabled = true;
             this.timer1.Stop();
             this.reloj.Text = "00:00";
         }
@@ -50,9 +56,9 @@ namespace GestiónModelo
                 this.reloj.Text = minutos.ToString("00") + ":" + segundos.ToString("00");
             }
             else
-            {
-                this.button2.Enabled = false;
-                this.button1.Enabled = true;
+            { 
+                this.btn_stop.Enabled = false;
+                this.btn_start.Enabled = true;
                 this.timer1.Stop();
                 MessageBox.Show("Se acabó el tiempo!");
             }

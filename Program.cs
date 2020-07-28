@@ -16,7 +16,7 @@ namespace GestiónModelo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cronometro());
+            Application.Run(new Sesión());
         }
     }
 }

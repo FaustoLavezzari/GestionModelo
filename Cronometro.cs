@@ -11,12 +11,12 @@ using System.Windows.Forms;
 namespace GestiónModelo
 {
     public partial class Cronometro : Form
-    {
-        T_prom prom;
+    {   
         int totalSegundos;
         int minutos;
         int segundos;
         Estrado estrado;
+        T_prom prome = new T_prom();
         public Cronometro()
         {
             InitializeComponent();
@@ -24,10 +24,10 @@ namespace GestiónModelo
       
         private void Form5_Load(object sender, EventArgs e)
         {
-            totalSegundos = 0;
-            estrado = new Estrado();
-            prom = new T_prom();
-            prom.Show();
+            totalSegundos = 1;
+            estrado = new Estrado();            
+            AbrirFormHija(prome);
+            prome.reloj.Text = minutos.ToString("00") + ":" + segundos.ToString("00");           
             pausar.Enabled = false;
             comenzar.Enabled = true;
             resetear.Enabled = false;
@@ -54,12 +54,11 @@ namespace GestiónModelo
             this.timer1.Enabled = false;
             this.reloj.Text = "00" + ":" + "00";
             estrado.addTime(totalSegundos);
-            totalSegundos = 0;
+            totalSegundos = 1;
             estrado.aumentarContador_del();
             minutos = (int)getTiempoProm() / 60;
             segundos = (int)(getTiempoProm() / 60 + getTiempoProm());
-            prom.reloj.Text = minutos.ToString("00") + ":" + segundos.ToString("00");
-            prom.Show();
+            prome.reloj.Text = minutos.ToString("00") + ":" + segundos.ToString("00");
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -74,7 +73,7 @@ namespace GestiónModelo
                     comenzar.Enabled = true;
                     pausar.Enabled = false;
                     resetear.Enabled = false;
-                    totalSegundos = 0;
+                    totalSegundos = 1;
                     this.timer1.Enabled = false;
                     this.reloj.Text = "00" + ":" + "00";
                     MessageBox.Show("ERROR: Se excedió la capacidad del cronómetro!");
@@ -90,6 +89,18 @@ namespace GestiónModelo
         {
             return Math.Round(estrado.getSumaTiempos()/estrado.getContador_del());
         }
-        
+
+        private void AbrirFormHija(object form_hija)
+        {
+            if (this.panel_prom.Controls.Count > 0)
+                this.panel_prom.Controls.RemoveAt(0);
+            Form prom = form_hija as Form;
+            prom.TopLevel = false;
+            prom.Dock = DockStyle.Fill;
+            this.panel_prom.Controls.Add(prom);
+            this.panel_prom.Tag = prom;
+            prom.TopLevel = false;
+            prom.Show();
+        }
     }
 }
