@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,9 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sesion.cs" />
-    <Compile Include="Topico.cs" />
-    <Compile Include="Valoracion.cs" />
+    <Compile Include="Estrado.cs" />
     <Compile Include="Delegacion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -57,11 +54,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaSesion.cs">
+    <Compile Include="Menu_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaSesion.Designer.cs">
-      <DependentUpon>PantallaSesion.cs</DependentUpon>
+    <Compile Include="Menu_Principal.Designer.cs">
+      <DependentUpon>Menu_Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -97,8 +94,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaSesion.resx">
-      <DependentUpon>PantallaSesion.cs</DependentUpon>
+    <EmbeddedResource Include="Menu_Principal.resx">
+      <DependentUpon>Menu_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
