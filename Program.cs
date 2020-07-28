@@ -33,7 +33,7 @@ namespace GestiónModelo
             }
             else
             {
-                Application.OpenForms[0].FormClosed += MainForm_Closed;
+                Application.OpenForms[0].FormClosed += MainForm_Closed; 
             }
         }
     }
