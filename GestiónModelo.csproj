@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Banderas.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sesion.cs" />
     <Compile Include="Temporizador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +84,7 @@
     <Compile Include="Cronometro.Designer.cs">
       <DependentUpon>Cronometro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Topico.cs" />
     <Compile Include="T_prom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +93,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Valoracion.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

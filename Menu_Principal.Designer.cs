@@ -1,6 +1,6 @@
 ﻿namespace GestiónModelo
 {
-    partial class Sesión
+    partial class PantallaPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -152,7 +152,7 @@
             this.panel_crono.Size = new System.Drawing.Size(225, 323);
             this.panel_crono.TabIndex = 5;
             // 
-            // Sesión
+            // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,7 +165,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Sesión";
+            this.Name = "PantallaPrincipal";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Sesión_Load);
             this.panel1.ResumeLayout(false);

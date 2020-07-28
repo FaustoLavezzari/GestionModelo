@@ -10,10 +10,12 @@ using System.Windows.Forms;
 
 namespace GestiónModelo
 {
-    public partial class Sesión : Form
+    public partial class PantallaPrincipal : Form
     {
-        public Sesión()
+        Sesion sesion;
+        public PantallaPrincipal(Sesion sesion)
         {
+            this.sesion = sesion;
             InitializeComponent();
         }
 
