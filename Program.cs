@@ -16,7 +16,6 @@ namespace GestiónModelo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             CreadorDeSesion creadorDeSesion = new CreadorDeSesion();
             creadorDeSesion.FormClosed += MainForm_Closed;
             creadorDeSesion.Show();
