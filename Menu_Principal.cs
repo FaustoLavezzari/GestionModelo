@@ -70,11 +70,6 @@ namespace GestiónModelo
             AbrirFormHija3(new asistencia(sesion.getDiccionarioPaises()));
         }
 
-        private void terminarPrograma(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void terminarPrograma(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
