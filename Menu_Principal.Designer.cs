@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_principal = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel_crono = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel_principal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,15 +72,15 @@
             this.textBox1.Size = new System.Drawing.Size(195, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // panel2
+            // panel_principal
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(231, 64);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(695, 702);
-            this.panel2.TabIndex = 1;
+            this.panel_principal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel_principal.Controls.Add(this.label3);
+            this.panel_principal.Controls.Add(this.label2);
+            this.panel_principal.Location = new System.Drawing.Point(231, 64);
+            this.panel_principal.Name = "panel_principal";
+            this.panel_principal.Size = new System.Drawing.Size(695, 702);
+            this.panel_principal.TabIndex = 1;
             // 
             // label3
             // 
@@ -108,6 +108,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Asistencia";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -163,15 +164,15 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel_principal);
             this.Controls.Add(this.panel1);
             this.Name = "PantallaPrincipal";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Sesión_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel_principal.ResumeLayout(false);
+            this.panel_principal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,7 +183,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_principal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

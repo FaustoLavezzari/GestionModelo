@@ -30,10 +30,12 @@ namespace GestiónModelo
 
         //seters
 
-        public void setAsistencia() { asistencia = true; }
+        public void setAsistencia(bool a) { asistencia =a; }
         // si se va usar un boton o algo para cambiar la asistencia para evitar errores podriamos negarla,
         //asistemcia=!asistencia; o ponerle como parametro true o false por si se quivoca el usuario
         //lo mismo para discurso 
+       
+       //sorry but not sorry!
 
         //getters
 

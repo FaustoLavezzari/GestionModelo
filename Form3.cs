@@ -78,6 +78,7 @@ namespace GestiónModelo
             PantallaPrincipal pantalla = new PantallaPrincipal(sesion);
             pantalla.Show();
             this.Close();
+
         }
     }
 }

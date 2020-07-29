@@ -26,6 +26,7 @@ namespace GestiónModelo
 
         private void Sesión_Load(object sender, EventArgs e)
         {            
+
             AbrirFormHija(new Temporizador());
             AbrirFormHija2(new Cronometro());            
         }
@@ -51,6 +52,22 @@ namespace GestiónModelo
             this.panel_crono.Controls.Add(tempo);
             this.panel_crono.Tag = tempo;
             tempo.Show();
+        }
+        private void AbrirFormHija3(object form_hija)
+        {
+            if (this.panel_principal.Controls.Count > 0)  
+                this.panel_principal.Controls.RemoveAt(0);//si hay algun control en el panel se elimina
+            Form asist = form_hija as Form; //se crea un formulario asist
+            asist.TopLevel = false;// es un formulario secundario
+            asist.Dock = DockStyle.Fill;//se acopla al panel
+            this.panel_principal.Controls.Add(asist);//se agrega al panel
+            this.panel_principal.Tag = asist;
+            asist.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija3(new asistencia(sesion.getDiccionarioPaises()));
         }
     }
 }
