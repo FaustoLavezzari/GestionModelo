@@ -29,7 +29,7 @@ namespace GestiónModelo
 
             if (Application.OpenForms.Count == 0)
             {
-                Application.ExitThread();
+                Application.Exit();
             }
             else
             {

@@ -73,6 +73,10 @@ namespace GestiónModelo
             {
                 paises.Add(seleccionado);
             }
+            if (topicos.Count == 0)
+            {
+                topicos.Add("Debate");
+            }
 
             Sesion sesion = new Sesion(paises, topicos);
             PantallaPrincipal pantalla = new PantallaPrincipal(sesion);
