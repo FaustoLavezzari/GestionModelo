@@ -18,7 +18,7 @@ namespace GestiónModelo
         private Dictionary<string, Delegacion> paises;
         public asistencia(Dictionary<string, Delegacion> lista_pais)
         {
-            
+
             InitializeComponent();
             paises = lista_pais;
             vista.Items.Add("Todos");
@@ -26,28 +26,28 @@ namespace GestiónModelo
             vista.Items.Add("Ausentes");
             vista.DropDownStyle = ComboBoxStyle.DropDownList; //de esta forma no deja editar o escribir el combox
             presentes = new HashSet<string>();
-            total = paises.Count ;
+            total = paises.Count;
         }
 
-       
-        
+
+
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
 
             foreach (string item in checkedListBox1.Items)//limpio
             {
-                   presentes.Remove(item);
-                   paises[item].setAsistencia(false);
+                presentes.Remove(item);
+                paises[item].setAsistencia(false);
             }
             foreach (string item in checkedListBox1.CheckedItems)//marco asistencia
             {
-               presentes.Add(item);
-               paises[item].setAsistencia(true);             
-                        
+                presentes.Add(item);
+                paises[item].setAsistencia(true);
+
             }
-               asist_prom.Text =((((presentes.Count+0.0)/total)*100).ToString()+"   ").Substring(0,3) + "%";
-   
+            asist_prom.Text = ((((presentes.Count + 0.0) / total) * 100).ToString() + "   ").Substring(0, 3) + "%";
+
         }
 
         private void asistencia_Load(object sender, EventArgs e)
@@ -55,12 +55,12 @@ namespace GestiónModelo
             checkedListBox1.Items.Clear();
             foreach (var item in paises.Values.ToList()) // cargo lista de paises en el diccionario
             {
-               checkedListBox1.Items.Add(item.getNombre(),item.getAsistencia());
+                checkedListBox1.Items.Add(item.getNombre(), item.getAsistencia());
             }
         }
 
 
-      
+
 
         private void select_Click(object sender, EventArgs e)//seleccionar todos
         {
@@ -82,7 +82,7 @@ namespace GestiónModelo
             checkedListBox1_SelectedIndexChanged(sender, e);
         }
 
-        private void vista_SelectedIndexChanged(object sender, EventArgs e)
+        private void vista_SelectedIndexChanged(object sender, EventArgs e)//filtrar busqueda
         {
 
             if (vista.Text == "Todos") { asistencia_Load(sender, e); }
@@ -105,29 +105,15 @@ namespace GestiónModelo
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {//hay que revisar para excepciones
+
+
+        private void buscador_TextChanged(object sender, EventArgs e)// buscador
+        {
             if (checkedListBox1.FindString(buscador.Text) != ListBox.NoMatches)
-            {
-                checkedListBox1.SetSelected(checkedListBox1.FindString(buscador.Text), true);
-            }
-            else 
-            {
-                MessageBox.Show("No se encontro el país \"" + buscador.Text + "\" en la lista.");
-            }
+            { checkedListBox1.SetSelected(checkedListBox1.FindString(buscador.Text), true); }
         }
-
-
-
-
 
     }
 
 }
 
-            /*Para posible ediciones estos metodos podrian servir:
-             * Console.WriteLine(checkedListBox1.FindString(string_a_buscar));
-             *   object a = checkedListBox1.SelectedItem; objeto seleccionado se castea con string y tira el pais 
-             *  checkedListBox1.FindString(buscador.Text);//si no esta hay que lanzar excepcion 
-                
-             * */

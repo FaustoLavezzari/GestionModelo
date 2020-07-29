@@ -34,7 +34,6 @@
             this.vista = new System.Windows.Forms.ComboBox();
             this.titulo = new System.Windows.Forms.Label();
             this.clean = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.asist_prom = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -254,6 +253,7 @@
             this.buscador.Name = "buscador";
             this.buscador.Size = new System.Drawing.Size(181, 20);
             this.buscador.TabIndex = 1;
+            this.buscador.TextChanged += new System.EventHandler(this.buscador_TextChanged);
             // 
             // select
             // 
@@ -268,7 +268,7 @@
             // vista
             // 
             this.vista.FormattingEnabled = true;
-            this.vista.Location = new System.Drawing.Point(377, 157);
+            this.vista.Location = new System.Drawing.Point(231, 156);
             this.vista.Name = "vista";
             this.vista.Size = new System.Drawing.Size(98, 21);
             this.vista.TabIndex = 4;
@@ -294,16 +294,6 @@
             this.clean.Text = "Clean";
             this.clean.UseVisualStyleBackColor = true;
             this.clean.Click += new System.EventHandler(this.clean_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(231, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -336,7 +326,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(375, 138);
+            this.label4.Location = new System.Drawing.Point(228, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 13);
             this.label4.TabIndex = 11;
@@ -352,7 +342,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.asist_prom);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.clean);
             this.Controls.Add(this.titulo);
             this.Controls.Add(this.vista);
@@ -376,7 +365,6 @@
         private System.Windows.Forms.ComboBox vista;
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Button clean;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label asist_prom;
         private System.Windows.Forms.Label label3;
