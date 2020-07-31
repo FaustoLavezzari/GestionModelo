@@ -54,10 +54,10 @@ namespace GestiónModelo
         }
 
         private void AñadirNuevaDelegacion(object sender, EventArgs e)
-        {
+        {            
             paises.Add(NombreDelegacion.Text);
             DelegacionesAñadidas.Items.Add(NombreDelegacion.Text);
-            NombreDelegacion.Text = null;
+            NombreDelegacion.Text = null;            
         }
 
         private void AñadirNuevoTopico(object sender, EventArgs e)

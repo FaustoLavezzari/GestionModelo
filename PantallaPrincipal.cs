@@ -33,12 +33,12 @@ namespace GestiónModelo
 
             int cont = 0;
             foreach (Delegacion delegacion in sesion.getListaPaises())
-            {
+            {               
                 iconos.Images.Add(delegacion.getBandera());
                 ListViewItem listViewItem = new ListViewItem(delegacion.getNombre(), cont);
                 Delegaciones.Items.Add(listViewItem);
                 cont++;
-            }
+            }           
             Delegaciones.SmallImageList = iconos;  
         }
 

@@ -14,22 +14,25 @@ namespace GestiónModelo
     public class Delegacion
     {
         private String nombre;
-        private Image bandera;
+        Image bandera;
         private int interpelaciones;
         private int pregResp;
         private bool asistencia;
-        private Valoracion valoracion;
+        Valoracion valoracion;
 
         public Delegacion(String nombre, Image bandera)
         {
-            this.bandera = bandera;
+            if (bandera == null)
+                this.bandera = Banderas.Default;
+            else
+                this.bandera = bandera;
             this.nombre = nombre;
             interpelaciones = 0;
             pregResp = 0;
             asistencia = false;
             valoracion = new Valoracion();
         }
-
+        
         public void incrementarInterpelaciones() { interpelaciones++; }
         public void incrementarRespuestas() { pregResp++; }
 
