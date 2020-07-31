@@ -44,6 +44,7 @@
             this.NombreTopico = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CrearSesion = new System.Windows.Forms.Button();
+            this.SeleccionarTodo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.SeleccionarTodo);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.seleccionadorDePaises);
             this.panel1.Location = new System.Drawing.Point(25, 28);
@@ -61,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 32);
+            this.label1.Location = new System.Drawing.Point(127, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 2;
@@ -198,6 +200,16 @@
             this.CrearSesion.UseVisualStyleBackColor = true;
             this.CrearSesion.Click += new System.EventHandler(this.CrearNuevaSesion);
             // 
+            // SeleccionarTodo
+            // 
+            this.SeleccionarTodo.Location = new System.Drawing.Point(16, 33);
+            this.SeleccionarTodo.Name = "SeleccionarTodo";
+            this.SeleccionarTodo.Size = new System.Drawing.Size(104, 23);
+            this.SeleccionarTodo.TabIndex = 3;
+            this.SeleccionarTodo.Text = "seleccionar todo";
+            this.SeleccionarTodo.UseVisualStyleBackColor = true;
+            this.SeleccionarTodo.Click += new System.EventHandler(this.SeleccionarTodo_Click);
+            // 
             // CreadorDeSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,5 +250,6 @@
         private System.Windows.Forms.Button CrearSesion;
         private System.Windows.Forms.Button AñadirDelegacion;
         private System.Windows.Forms.Button AñadirTopico;
+        private System.Windows.Forms.Button SeleccionarTodo;
     }
 }

@@ -82,7 +82,14 @@ namespace GestiónModelo
             PantallaPrincipal pantalla = new PantallaPrincipal(sesion);
             pantalla.Show();
             this.Close();
+        }
 
+        private void SeleccionarTodo_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < seleccionadorDePaises.Items.Count; i++)
+            {
+                seleccionadorDePaises.SetItemChecked(i, true);
+            }
         }
     }
 }

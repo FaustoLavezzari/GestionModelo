@@ -60,17 +60,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Principal.cs">
+    <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Principal.Designer.cs">
-      <DependentUpon>Menu_Principal.cs</DependentUpon>
+    <Compile Include="PantallaPrincipal.Designer.cs">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="CreadorDeSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="CreadorDeSesion.Designer.cs">
+      <DependentUpon>CreadorDeSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Banderas.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -106,11 +106,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Principal.resx">
-      <DependentUpon>Menu_Principal.cs</DependentUpon>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="CreadorDeSesion.resx">
+      <DependentUpon>CreadorDeSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Banderas.resx">
       <Generator>ResXFileCodeGenerator</Generator>
