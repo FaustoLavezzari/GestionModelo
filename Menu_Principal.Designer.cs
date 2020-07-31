@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Delegaciones = new System.Windows.Forms.ListView();
+            this.Delegacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel_principal = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel_crono = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.panel_principal.SuspendLayout();
             this.SuspendLayout();
@@ -50,26 +52,35 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.Delegaciones);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(12, -2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 768);
             this.panel1.TabIndex = 0;
             // 
-            // listBox1
+            // Delegaciones
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 49);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(195, 706);
-            this.listBox1.TabIndex = 1;
+            this.Delegaciones.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Delegacion});
+            this.Delegaciones.HideSelection = false;
+            this.Delegaciones.Location = new System.Drawing.Point(4, 53);
+            this.Delegaciones.Name = "Delegaciones";
+            this.Delegaciones.Size = new System.Drawing.Size(206, 686);
+            this.Delegaciones.TabIndex = 1;
+            this.Delegaciones.UseCompatibleStateImageBehavior = false;
+            this.Delegaciones.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // Delegacion
+            // 
+            this.Delegacion.Text = "Delegaciones";
+            this.Delegacion.Width = 200;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(3, 26);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 20);
+            this.textBox1.Size = new System.Drawing.Size(207, 20);
             this.textBox1.TabIndex = 0;
             // 
             // panel_principal
@@ -144,7 +155,6 @@
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = " INFO ESTRADO";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel_crono
             // 
@@ -182,7 +192,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel_principal;
         private System.Windows.Forms.Label label2;
@@ -195,5 +204,8 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel_crono;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ListView Delegaciones;
+        private System.Windows.Forms.ColumnHeader Delegacion;
     }
 }

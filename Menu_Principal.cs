@@ -12,24 +12,35 @@ namespace GestiónModelo
 {
     public partial class PantallaPrincipal : Form
     {
-        Sesion sesion;
+        private Sesion sesion;
+
+
         public PantallaPrincipal(Sesion sesion)
         {
             this.sesion = sesion;
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Sesión_Load(object sender, EventArgs e)
         {            
-
             AbrirFormHija(new Temporizador());
-            AbrirFormHija2(new Cronometro());            
+            AbrirFormHija2(new Cronometro());
+
+            //Carga ListView de delegaciones
+
+            ImageList iconos = new ImageList();
+            iconos.ImageSize = new Size(30, 30);
+
+            int cont = 0;
+            foreach (Delegacion delegacion in sesion.getListaPaises())
+            {
+                iconos.Images.Add(delegacion.getBandera());
+                ListViewItem listViewItem = new ListViewItem(delegacion.getNombre(), cont);
+                Delegaciones.Items.Add(listViewItem);
+            }
+          
         }
+
         private void AbrirFormHija(object form_hija) 
         {
             if (this.panel_tempo.Controls.Count > 0)

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Resources;
+using System.Reflection;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace GestiónModelo
 {
@@ -17,9 +21,12 @@ namespace GestiónModelo
             this.paises = new Dictionary<string, Delegacion>();
             this.topicos = new Dictionary<string, Topico>();
 
+            ResourceManager resourceManager = new ResourceManager("Banderas", this.GetType().Assembly);
+
+
             foreach (string pais in paises)
             {
-                Delegacion nueva_delegacion = new Delegacion(pais);
+                Delegacion nueva_delegacion = new Delegacion(pais,(System.Drawing.Image)resourceManager.GetObject(pais));
                 this.paises.Add(pais, nueva_delegacion);
             }
 
