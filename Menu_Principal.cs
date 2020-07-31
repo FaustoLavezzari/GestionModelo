@@ -38,7 +38,7 @@ namespace GestiónModelo
                 ListViewItem listViewItem = new ListViewItem(delegacion.getNombre(), cont);
                 Delegaciones.Items.Add(listViewItem);
             }
-          
+            Delegaciones.SmallImageList = iconos;  
         }
 
         private void AbrirFormHija(object form_hija) 
