@@ -28,7 +28,7 @@ namespace GestiónModelo
             {
                 string pais_n = pais.Replace("\r", "");
                 Delegacion nueva_delegacion = new Delegacion(pais_n,(Image) GestiónModelo.Banderas.ResourceManager.GetObject(pais_n));
-                this.paises.Add(pais, nueva_delegacion);
+                this.paises.Add(pais_n, nueva_delegacion);
             }
 
             foreach (string topico in topicos)
