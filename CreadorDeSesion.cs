@@ -90,6 +90,25 @@ namespace GestiónModelo
             {
                 seleccionadorDePaises.SetItemChecked(i, true);
             }
+            SeleccionarTodo.Visible = false;
+            clean.Visible = true;
+        }
+
+        private void buscador_TextChanged(object sender, EventArgs e)
+        {
+            if (seleccionadorDePaises.FindString(buscador.Text) != ListBox.NoMatches)
+            { seleccionadorDePaises.SetSelected(seleccionadorDePaises.FindString(buscador.Text), true); }
+           
+        }
+
+        private void clean_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < seleccionadorDePaises.Items.Count; i++)
+            {
+                seleccionadorDePaises.SetItemChecked(i, false);
+            }
+            SeleccionarTodo.Visible = true;
+            clean.Visible = false;
         }
     }
 }

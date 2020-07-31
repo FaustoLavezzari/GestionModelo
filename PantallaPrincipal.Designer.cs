@@ -67,6 +67,7 @@
             this.Delegaciones.Location = new System.Drawing.Point(4, 53);
             this.Delegaciones.Name = "Delegaciones";
             this.Delegaciones.Size = new System.Drawing.Size(206, 686);
+            this.Delegaciones.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.Delegaciones.TabIndex = 1;
             this.Delegaciones.UseCompatibleStateImageBehavior = false;
             this.Delegaciones.View = System.Windows.Forms.View.SmallIcon;

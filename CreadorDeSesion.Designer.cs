@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SeleccionarTodo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.seleccionadorDePaises = new System.Windows.Forms.CheckedListBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -44,7 +46,9 @@
             this.NombreTopico = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CrearSesion = new System.Windows.Forms.Button();
-            this.SeleccionarTodo = new System.Windows.Forms.Button();
+            this.buscador = new System.Windows.Forms.TextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.clean = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -52,6 +56,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.clean);
+            this.panel1.Controls.Add(this.buscador);
             this.panel1.Controls.Add(this.SeleccionarTodo);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.seleccionadorDePaises);
@@ -59,6 +65,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(338, 454);
             this.panel1.TabIndex = 0;
+            // 
+            // SeleccionarTodo
+            // 
+            this.SeleccionarTodo.Location = new System.Drawing.Point(213, 34);
+            this.SeleccionarTodo.Name = "SeleccionarTodo";
+            this.SeleccionarTodo.Size = new System.Drawing.Size(104, 23);
+            this.SeleccionarTodo.TabIndex = 3;
+            this.SeleccionarTodo.Text = "seleccionar todo";
+            this.SeleccionarTodo.UseVisualStyleBackColor = true;
+            this.SeleccionarTodo.Click += new System.EventHandler(this.SeleccionarTodo_Click);
             // 
             // label1
             // 
@@ -76,6 +92,7 @@
             this.seleccionadorDePaises.Location = new System.Drawing.Point(16, 59);
             this.seleccionadorDePaises.Name = "seleccionadorDePaises";
             this.seleccionadorDePaises.Size = new System.Drawing.Size(301, 379);
+            this.seleccionadorDePaises.Sorted = true;
             this.seleccionadorDePaises.TabIndex = 1;
             // 
             // panel2
@@ -200,15 +217,227 @@
             this.CrearSesion.UseVisualStyleBackColor = true;
             this.CrearSesion.Click += new System.EventHandler(this.CrearNuevaSesion);
             // 
-            // SeleccionarTodo
+            // buscador
             // 
-            this.SeleccionarTodo.Location = new System.Drawing.Point(16, 33);
-            this.SeleccionarTodo.Name = "SeleccionarTodo";
-            this.SeleccionarTodo.Size = new System.Drawing.Size(104, 23);
-            this.SeleccionarTodo.TabIndex = 3;
-            this.SeleccionarTodo.Text = "seleccionar todo";
-            this.SeleccionarTodo.UseVisualStyleBackColor = true;
-            this.SeleccionarTodo.Click += new System.EventHandler(this.SeleccionarTodo_Click);
+            this.buscador.AutoCompleteCustomSource.AddRange(new string[] {
+            "Afganistan",
+            "Albania",
+            "Alemania",
+            "Andorra",
+            "Angola",
+            "Antigua y Barbuda",
+            "Arabia Saudita",
+            "Argelia",
+            "Argentina",
+            "Armenia",
+            "Australia",
+            "Austria",
+            "Azerbaiyan",
+            "Bahamas",
+            "Bahrein",
+            "Bangladesh",
+            "Barbados",
+            "Belarus",
+            "Belgica",
+            "Belice",
+            "Benin",
+            "Bhutan",
+            "Bolivia",
+            "Bosnia y Herzegovina",
+            "Botswana",
+            "Brasil",
+            "Brunei",
+            "Bulgaria",
+            "Burkina Faso",
+            "Burundi",
+            "Cabo Verde",
+            "Camboya",
+            "Camerun",
+            "Canadá",
+            "Chad",
+            "Chile",
+            "China",
+            "Chipre",
+            "Colombia",
+            "Comoras",
+            "Congo",
+            "Costa Rica",
+            "Costa de Marfil",
+            "Croacia",
+            "Cuba",
+            "Dinamarca",
+            "Djibouti",
+            "Dominica",
+            "Ecuador",
+            "Egipto",
+            "El Salvador",
+            "Emiratos Arabes Unidos",
+            "Eritrea",
+            "Eslovaquia",
+            "Eslovenia",
+            "España",
+            "Estados Unidos de America",
+            "Estonia",
+            "Eswatini",
+            "Etiopia",
+            "Rusia",
+            "Fiji",
+            "Filipinas",
+            "Finlandia",
+            "Francia",
+            "Gabon",
+            "Gambia",
+            "Georgia",
+            "Ghana",
+            "Granada",
+            "Grecia",
+            "Guatemala",
+            "Guinea",
+            "Guinea Bissau",
+            "Guinea Ecuatorial",
+            "Guyana",
+            "Haiti",
+            "Honduras",
+            "Hungria",
+            "India",
+            "Indonesia",
+            "Iran",
+            "Iraq",
+            "Irlanda",
+            "Islandia",
+            "Islas Marshall",
+            "Islas Salomon",
+            "Israel",
+            "Italia",
+            "Jamaica",
+            "Japon",
+            "Jordania",
+            "Kazajstan",
+            "Kenya",
+            "Kirguistan",
+            "Kiribati",
+            "Kuwait",
+            "Lesotho",
+            "Letonia",
+            "Libano",
+            "Liberia",
+            "Libia",
+            "Liechtenstein",
+            "Lituania",
+            "Luxemburgo",
+            "Macedonia del Norte",
+            "Madagascar",
+            "Malasia",
+            "Malawi",
+            "Maldivas",
+            "Mali",
+            "Malta",
+            "Marruecos",
+            "Mauricio",
+            "Mauritania",
+            "Mexico",
+            "Micronesia",
+            "Monaco",
+            "Mongolia",
+            "Montenegro",
+            "Mozambique",
+            "Myanmar",
+            "Namibia",
+            "Nauru",
+            "Nepal",
+            "Nicaragua",
+            "Niger",
+            "Nigeria",
+            "Noruega",
+            "Nueva Zelandia",
+            "Oman",
+            "Paises Bajos",
+            "Pakistan",
+            "Palau",
+            "Panama",
+            "Papua Nueva Guinea",
+            "Paraguay",
+            "Peru",
+            "Polonia",
+            "Portugal",
+            "Qatar",
+            "Reino Unido de Gran Bretaña e Irlanda del Norte",
+            "Siria",
+            "Republica Centroafricana",
+            "Republica Checa",
+            "Republica de Corea",
+            "Republica de Moldova",
+            "República Democratica del Congo",
+            "República Democratica Popular Lao",
+            "Republica Dominicana",
+            "Republica Popular Democratica de Corea",
+            "Republica Unida de Tanzania",
+            "Rumania",
+            "Rwanda",
+            "Saint Kitts y Nevis",
+            "Samoa",
+            "San Marino",
+            "San Vicente y las Granadinas",
+            "Santa Lucia",
+            "Santo Tome y Principe",
+            "Senegal",
+            "Serbia",
+            "Seychelles",
+            "Sierra Leona",
+            "Singapur",
+            "Somalia",
+            "Sri Lanka",
+            "Sudafrica",
+            "Sudan",
+            "Sudan del Sur",
+            "Suecia",
+            "Suiza",
+            "Suriname",
+            "Tailandia",
+            "Tayikistan",
+            "Timor-Leste",
+            "Togo",
+            "Tonga",
+            "Trinidad y Tobago",
+            "Tunez",
+            "Turkmenistan",
+            "Turquia",
+            "Tuvalu",
+            "Ucrania",
+            "Uganda",
+            "Uruguay",
+            "Uzbekistan",
+            "Vanuatu",
+            "Venezuela",
+            "Vietnam",
+            "Yemen",
+            "Zambia",
+            "Zimbabwe"});
+            this.buscador.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.buscador.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.buscador.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.buscador.Location = new System.Drawing.Point(16, 34);
+            this.buscador.Name = "buscador";
+            this.buscador.Size = new System.Drawing.Size(191, 20);
+            this.buscador.TabIndex = 4;
+            this.buscador.TextChanged += new System.EventHandler(this.buscador_TextChanged);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // clean
+            // 
+            this.clean.Location = new System.Drawing.Point(213, 34);
+            this.clean.Name = "clean";
+            this.clean.Size = new System.Drawing.Size(104, 23);
+            this.clean.TabIndex = 7;
+            this.clean.Text = "Borrar todo";
+            this.clean.UseVisualStyleBackColor = true;
+            this.clean.Visible = false;
+            this.clean.Click += new System.EventHandler(this.clean_Click);
             // 
             // CreadorDeSesion
             // 
@@ -251,5 +480,8 @@
         private System.Windows.Forms.Button AñadirDelegacion;
         private System.Windows.Forms.Button AñadirTopico;
         private System.Windows.Forms.Button SeleccionarTodo;
+        private System.Windows.Forms.TextBox buscador;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button clean;
     }
 }
