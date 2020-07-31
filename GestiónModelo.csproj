@@ -152,6 +152,147 @@
     <None Include="Properties\paises.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Banderas_LR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Senegal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Serbia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seychelles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sierra Leone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Singapur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sint-eustatius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sint-maarten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Siria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Somalia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\somaliland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sri Lanka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\st-barts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sudafrica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sudan del Sur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sudan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suecia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suiza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suriname.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tailandia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taiwan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tayikistan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tibet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Timor-Leste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Togo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tokelau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tonga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transnistria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trinidad y Tobago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tunez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turkmenistan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turks-and-caicos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turquia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tuvalu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ucrania.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Uganda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Uruguay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Uzbekistan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vanuatu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vatican-city.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Venezuela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vietnam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\virgin-islands.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\western-sahara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yemen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zambia.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Zimbabwe.png" />
   </ItemGroup>
   <ItemGroup>
@@ -354,6 +495,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\curacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Dinamarca.png" />
@@ -801,147 +945,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\scotland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Senegal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Serbia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Seychelles.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sierra Leone.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Singapur.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sint-eustatius.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sint-maarten.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Siria.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Somalia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\somaliland.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sri Lanka.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\st-barts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sudafrica.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sudan del Sur.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sudan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Suecia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Suiza.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Suriname.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tailandia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\taiwan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tayikistan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tibet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Timor-Leste.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Togo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tokelau.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tonga.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\transnistria.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Trinidad y Tobago.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tunez.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Turkmenistan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\turks-and-caicos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Turquia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tuvalu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ucrania.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Uganda.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Uruguay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Uzbekistan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Vanuatu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vatican-city.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Venezuela.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Vietnam.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\virgin-islands.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wales.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\western-sahara.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Yemen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Zambia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
