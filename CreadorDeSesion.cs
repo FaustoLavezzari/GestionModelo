@@ -12,7 +12,7 @@ namespace GestiónModelo
 {
     public partial class CreadorDeSesion : Form
     {
-
+        private Dictionary<string,bool> seleccion;
         private List<string> paises;
         private List<string> topicos;
 
@@ -21,6 +21,9 @@ namespace GestiónModelo
             InitializeComponent();
             paises = new List<string>();
             topicos = new List<string>();
+
+            seleccion = new Dictionary<string, bool>();
+
         }
 
         private void CreadorDeSesion_Load(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace GestiónModelo
             foreach (string pais in lista)
             {
                 seleccionadorDePaises.Items.Add(pais);
+                seleccion.Add(pais,false);
             }
         }
 
@@ -87,11 +91,16 @@ namespace GestiónModelo
         private void SeleccionarTodo_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < seleccionadorDePaises.Items.Count; i++)
+            {  seleccionadorDePaises.SetItemChecked(i, true);   }
+               
+            foreach (string item in seleccionadorDePaises.Items)
             {
-                seleccionadorDePaises.SetItemChecked(i, true);
+              
+                seleccion[item] = true;
             }
-            SeleccionarTodo.Visible = false;
+            SeleccionarTodo.Visible =false;
             clean.Visible = true;
+
         }
 
         private void buscador_TextChanged(object sender, EventArgs e)
@@ -103,12 +112,52 @@ namespace GestiónModelo
 
         private void clean_Click(object sender, EventArgs e)
         {
+
             for (int i = 0; i < seleccionadorDePaises.Items.Count; i++)
-            {
-                seleccionadorDePaises.SetItemChecked(i, false);
+            { seleccionadorDePaises.SetItemChecked(i, false); }
+
+            foreach (string item in seleccionadorDePaises.Items)
+            {seleccion[item] =false;
             }
             SeleccionarTodo.Visible = true;
             clean.Visible = false;
+
+        }
+
+    
+        private void seleccionadorDePaises_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            seleccion[(string)seleccionadorDePaises.SelectedItem] = seleccionadorDePaises.GetItemChecked(seleccionadorDePaises.SelectedIndex);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {  seleccionadorDePaises.Items.Clear();
+            if (comboBox1.Text == "☐")
+            {
+                foreach (var item in seleccion)
+                {
+                    seleccionadorDePaises.Items.Add(item.Key, item.Value);
+                }
+            }
+            else
+            {    if(comboBox1.Text == "☑")
+                { 
+                    foreach (var item in seleccion)
+                    {
+                        if (item.Value == true)
+                        { seleccionadorDePaises.Items.Add(item.Key, item.Value); }
+                    }
+                }
+                else
+                {
+                    foreach (var item in seleccion)
+                    {
+                        if (item.Value == false)
+                        { seleccionadorDePaises.Items.Add(item.Key, item.Value); }
+                    }
+
+                }
+            }
         }
     }
 }
