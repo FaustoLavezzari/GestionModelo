@@ -30,6 +30,8 @@ namespace GestiónModelo
         {
             AñadirTopico.Enabled = false;
             AñadirDelegacion.Enabled = false;
+            SeleccionarTodo.Visible = true;
+            clean.Visible = true;
 
             string paises = Properties.Resources.paises;
             List<string> lista = paises.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
@@ -94,13 +96,9 @@ namespace GestiónModelo
             {  seleccionadorDePaises.SetItemChecked(i, true);   }
                
             foreach (string item in seleccionadorDePaises.Items)
-            {
-              
+            {              
                 seleccion[item] = true;
-            }
-            SeleccionarTodo.Visible =false;
-            clean.Visible = true;
-
+            }            
         }
 
         private void buscador_TextChanged(object sender, EventArgs e)
@@ -117,11 +115,9 @@ namespace GestiónModelo
             { seleccionadorDePaises.SetItemChecked(i, false); }
 
             foreach (string item in seleccionadorDePaises.Items)
-            {seleccion[item] =false;
-            }
-            SeleccionarTodo.Visible = true;
-            clean.Visible = false;
-
+            {
+                seleccion[item] = false;
+            }           
         }
 
     

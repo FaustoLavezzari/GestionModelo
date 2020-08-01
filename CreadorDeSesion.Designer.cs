@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.clean = new System.Windows.Forms.Button();
             this.buscador = new System.Windows.Forms.TextBox();
             this.SeleccionarTodo = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CrearSesion = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,9 +68,22 @@
             this.panel1.Size = new System.Drawing.Size(338, 454);
             this.panel1.TabIndex = 0;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "☐ Todos",
+            "☑ Seleccionados",
+            "☒ Sin Seleccionar"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 5);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(133, 21);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // clean
             // 
-            this.clean.Location = new System.Drawing.Point(213, 34);
+            this.clean.Location = new System.Drawing.Point(233, 33);
             this.clean.Name = "clean";
             this.clean.Size = new System.Drawing.Size(104, 23);
             this.clean.TabIndex = 7;
@@ -278,26 +291,26 @@
             this.buscador.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.buscador.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.buscador.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.buscador.Location = new System.Drawing.Point(38, 34);
+            this.buscador.Location = new System.Drawing.Point(16, 33);
             this.buscador.Name = "buscador";
-            this.buscador.Size = new System.Drawing.Size(169, 20);
+            this.buscador.Size = new System.Drawing.Size(211, 20);
             this.buscador.TabIndex = 4;
             this.buscador.TextChanged += new System.EventHandler(this.buscador_TextChanged);
             // 
             // SeleccionarTodo
             // 
-            this.SeleccionarTodo.Location = new System.Drawing.Point(213, 34);
+            this.SeleccionarTodo.Location = new System.Drawing.Point(234, 3);
             this.SeleccionarTodo.Name = "SeleccionarTodo";
             this.SeleccionarTodo.Size = new System.Drawing.Size(104, 23);
             this.SeleccionarTodo.TabIndex = 3;
-            this.SeleccionarTodo.Text = "seleccionar todo";
+            this.SeleccionarTodo.Text = "Seleccionar todo";
             this.SeleccionarTodo.UseVisualStyleBackColor = true;
             this.SeleccionarTodo.Click += new System.EventHandler(this.SeleccionarTodo_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 13);
+            this.label1.Location = new System.Drawing.Point(155, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 2;
@@ -441,19 +454,6 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "☐",
-            "☑",
-            "☒"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(17, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // CreadorDeSesion
             // 
