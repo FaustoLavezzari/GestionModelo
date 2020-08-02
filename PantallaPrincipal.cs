@@ -77,6 +77,13 @@ namespace GestiónModelo
             asist.Show();
         }
 
+        private void Delegaciones_MouseClick(object sender, MouseEventArgs e)
+        {
+            panel_principal.Controls.Clear();
+            Delegacion delegacion_seleccionada =sesion.getDelegacion(Delegaciones.SelectedItems[0].Text);
+            AbrirFormHija3(new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo()));
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormHija3(new asistencia(sesion.getDiccionarioPaises()));

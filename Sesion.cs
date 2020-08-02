@@ -21,9 +21,6 @@ namespace GestiónModelo
             this.paises = new Dictionary<string, Delegacion>();
             this.topicos = new Dictionary<string, Topico>();
 
-            ResourceManager resourceManager = new ResourceManager("Banderas", this.GetType().Assembly);
-
-
             foreach (string pais in paises)
             {
                 string pais_n = pais.Replace("\r", "");
@@ -95,7 +92,5 @@ namespace GestiónModelo
                 throw new ArgumentOutOfRangeException();
             }
         }
-
-
     }
 }

@@ -71,6 +71,7 @@
             this.Delegaciones.TabIndex = 1;
             this.Delegaciones.UseCompatibleStateImageBehavior = false;
             this.Delegaciones.View = System.Windows.Forms.View.SmallIcon;
+            this.Delegaciones.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Delegaciones_MouseClick);
             // 
             // Delegacion
             // 
