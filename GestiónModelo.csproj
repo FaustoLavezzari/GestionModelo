@@ -65,6 +65,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delegacion_Estrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delegacion_Estrado.Designer.cs">
+      <DependentUpon>Delegacion_Estrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoDelegacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delegacion_Estrado.resx">
+      <DependentUpon>Delegacion_Estrado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoDelegacion.resx">
       <DependentUpon>InfoDelegacion.cs</DependentUpon>

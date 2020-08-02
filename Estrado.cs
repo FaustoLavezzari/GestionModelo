@@ -9,14 +9,13 @@ using System.Windows.Forms;
 namespace GestiónModelo
 {
     class Estrado
-    {
-        private Delegacion en_estrado;
+    {        
         private int tiempo_estrado;
         private double sumaTiempos = 0;
         private int contador_del = 0;
 
-        public Estrado(/*Delegacion en_estrado*/){
-            //this.en_estrado = en_estrado;
+        public Estrado()
+        {            
         }
         public void addTime(int tiempo) {
            sumaTiempos += tiempo;

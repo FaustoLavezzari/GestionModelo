@@ -34,8 +34,6 @@
             this.Delegacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel_principal = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,8 +43,9 @@
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel_crono = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel_del_Estrado = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel_principal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,30 +87,10 @@
             // panel_principal
             // 
             this.panel_principal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel_principal.Controls.Add(this.label3);
-            this.panel_principal.Controls.Add(this.label2);
             this.panel_principal.Location = new System.Drawing.Point(231, 64);
             this.panel_principal.Name = "panel_principal";
-            this.panel_principal.Size = new System.Drawing.Size(695, 702);
+            this.panel_principal.Size = new System.Drawing.Size(695, 673);
             this.panel_principal.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(266, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "PANEL PRINCIPAL";
             // 
             // button1
             // 
@@ -152,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1000, 74);
+            this.label1.Location = new System.Drawing.Point(997, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 0;
@@ -165,27 +144,43 @@
             this.panel_crono.Size = new System.Drawing.Size(225, 323);
             this.panel_crono.TabIndex = 5;
             // 
+            // panel_del_Estrado
+            // 
+            this.panel_del_Estrado.Location = new System.Drawing.Point(932, 28);
+            this.panel_del_Estrado.Name = "panel_del_Estrado";
+            this.panel_del_Estrado.Size = new System.Drawing.Size(225, 59);
+            this.panel_del_Estrado.TabIndex = 6;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(968, 90);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(156, 45);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Hacer Interpelación";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 749);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.panel_del_Estrado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_crono);
             this.Controls.Add(this.panel_tempo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel_principal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_principal);
             this.Name = "PantallaPrincipal";
             this.Text = "Form2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.terminarPrograma);
             this.Load += new System.EventHandler(this.Sesión_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel_principal.ResumeLayout(false);
-            this.panel_principal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,7 +191,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel_principal;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -204,10 +198,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel_crono;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ListView Delegaciones;
         private System.Windows.Forms.ColumnHeader Delegacion;
+        private System.Windows.Forms.Panel panel_del_Estrado;
+        private System.Windows.Forms.Button button4;
     }
 }

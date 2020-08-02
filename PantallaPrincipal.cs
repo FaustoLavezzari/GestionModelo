@@ -13,8 +13,7 @@ namespace GestiónModelo
     public partial class PantallaPrincipal : Form
     {
         private Sesion sesion;
-
-
+            
         public PantallaPrincipal(Sesion sesion)
         {
             this.sesion = sesion;
@@ -22,7 +21,7 @@ namespace GestiónModelo
         }
 
         private void Sesión_Load(object sender, EventArgs e)
-        {            
+        {
             AbrirFormHija(new Temporizador());
             AbrirFormHija2(new Cronometro());
 
@@ -84,14 +83,19 @@ namespace GestiónModelo
             asist.TopLevel = false;// es un formulario secundario
             asist.Dock = DockStyle.Fill;//se acopla al panel
             this.panel_principal.Controls.Add(asist);//se agrega al panel
-            this.panel_principal.Tag = asist;
+            this.panel_principal.Tag = asist;            
             asist.Show();
+
+            
         }
+
+        
 
         private void Delegaciones_MouseClick(object sender, MouseEventArgs e)
         {            
-            Delegacion delegacion_seleccionada =sesion.getDelegacion(Delegaciones.SelectedItems[0].Text);
-            AbrirFormHija3(new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo()));
+            Delegacion delegacion_seleccionada = sesion.getDelegacion(Delegaciones.SelectedItems[0].Text);                       
+            InfoDelegacion info_del = new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo(), panel_del_Estrado); 
+            AbrirFormHija3(info_del);            
         }
 
         private void button1_Click(object sender, EventArgs e)
