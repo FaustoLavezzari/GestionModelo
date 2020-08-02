@@ -67,8 +67,19 @@ namespace GestiónModelo
         }
         private void AbrirFormHija3(object form_hija)
         {
-            if (this.panel_principal.Controls.Count > 0)  
-                this.panel_principal.Controls.RemoveAt(0);//si hay algun control en el panel se elimina
+            List<Form> abiertos = new List<Form>();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is InfoDelegacion || form is asistencia)
+                {
+                    abiertos.Add(form);
+                }
+            }
+            foreach (Form form1 in abiertos)
+            {
+                form1.Close();
+            }
+            panel_principal.Controls.Clear();
             Form asist = form_hija as Form; //se crea un formulario asist
             asist.TopLevel = false;// es un formulario secundario
             asist.Dock = DockStyle.Fill;//se acopla al panel
@@ -78,8 +89,7 @@ namespace GestiónModelo
         }
 
         private void Delegaciones_MouseClick(object sender, MouseEventArgs e)
-        {
-            panel_principal.Controls.Clear();
+        {            
             Delegacion delegacion_seleccionada =sesion.getDelegacion(Delegaciones.SelectedItems[0].Text);
             AbrirFormHija3(new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo()));
         }

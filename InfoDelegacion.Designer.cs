@@ -88,7 +88,7 @@
             this.Bandera.Location = new System.Drawing.Point(428, 40);
             this.Bandera.Name = "Bandera";
             this.Bandera.Size = new System.Drawing.Size(187, 126);
-            this.Bandera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Bandera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Bandera.TabIndex = 4;
             this.Bandera.TabStop = false;
             // 
@@ -131,7 +131,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(128, 230);
+            this.label5.Location = new System.Drawing.Point(125, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 9;

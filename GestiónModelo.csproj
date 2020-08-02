@@ -52,6 +52,11 @@
     <Compile Include="asistencia.Designer.cs">
       <DependentUpon>asistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="BanderasGrandes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BanderasGrandes.resx</DependentUpon>
+    </Compile>
     <Compile Include="Estrado.cs" />
     <Compile Include="Delegacion.cs" />
     <Compile Include="Form1.cs">
@@ -108,6 +113,10 @@
     <Compile Include="Valoracion.cs" />
     <EmbeddedResource Include="asistencia.resx">
       <DependentUpon>asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BanderasGrandes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BanderasGrandes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -954,6 +963,777 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\scotland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AngolaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AfghanistanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlaniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlemaniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AndorraG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arabia SauditaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArgeliaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArgentinaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArmeniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AustraliaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AustriaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antigua y BarbudaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AzerbaiyanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BahamasG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BahreinG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balearic-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BangladeshG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarbadosG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basque-countryG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BelarusG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TuvaluG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UcraniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UgandaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Union EuropeaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UruguayG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UzbekistanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VanuatuG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Santa SedeG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VenezuelaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VietnamG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\virgin-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walesG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\western-saharaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YemenG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZambiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZimbabweG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BelgicaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeliceG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeninG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bermudaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bhutan-1G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BhutanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoliviaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BonaireG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bosnia y HerzegovinaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotswanaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrasilG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\british-columbiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\british-indian-ocean-territoryG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\british-virgin-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BruneiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulgariaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burkina FasoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BurundiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cabo VerdeG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CamboyaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CamerunG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanadaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canary-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cayman-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceutaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChadG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChileG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChinaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChipreG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\christmas-islandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cocos-islandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColombiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComorasG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CongoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cook-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corsicaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Costa de MarfilG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Costa RicaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CroaciaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CubaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curacaoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DinamarcaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DjiboutiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DominicaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EcuadorG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EgiptoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\El SalvadorG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emiratos Arabes UnidosG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\englandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EritreaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EslovakiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EsloveniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EspañaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Estados Unidos de AmericaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstoniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EswatiniG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EtiopiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\falkland-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faroe-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FijiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FilipinasG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FinlandiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FranciaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french-polynesiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GabonG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\galapagos-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GambiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeorgiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GhanaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gibraltarG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GranadaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreciaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenlandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guamG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuatemalaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guernseyG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guinea BissauG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guinea EcuatorialG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuineaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuyanaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HaitiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hawaiiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HondurasG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hong KongG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HungriaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndonesiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IranG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IraqG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IrlandaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IslandiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Islas SalomonG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\isle-of-manG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IsraelG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ItaliaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JamaicaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JaponG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jerseyG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JordaniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KazajstanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KenyaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KirguistanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KiribatiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kosovoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KuwaitG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LesothoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LetoniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LibanoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiberiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LibiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiechtensteinG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LithuaniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuxembourgoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macaoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Macedonia del NorteG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MadagascarG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\madeiraG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MalasiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MalawiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaldivasG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaliG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaltaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarruecosG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\martiniqueG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MauricioG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MauritaniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\melillaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MexicoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicronesiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonacoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MongoliaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MontenegroG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\montserratG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MozambiqueG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyanmarG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Naciones UnidasG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NamibiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NauruG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NepalG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicaraguaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NigerG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NigeriaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\niueG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\norfolk-islandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\northen-cyprusG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\northern-marianas-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoruegaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nueva ZelandiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orkney-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ossetiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paises BajosG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PakistanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PalauG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PalestinaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanamaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Papua Nueva GuineaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParaguayG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PeruG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pitcairn-islandsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PoloniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PortugalG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puerto-ricoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QatarG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rapa-nuiG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reino UnidoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Republica CentroafricanaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Republica ChecaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Corea del SurG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoldovaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rep.Dem del CongoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Republica DominicanaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Corea del NorteG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TanzaniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RumaniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RusiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RwandaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saba-islandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saint Kitts y NevisG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SamoaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\San MarinoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\San Vicente y las GranadinasG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Santa LuciaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Santo Tome y PrincipeG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sardiniaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scotlandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SenegalG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SerbiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeychellesG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sierra LeoneG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SingapurG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sint-eustatiusG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sint-maartenG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SiriaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SomaliaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\somalilandG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sri LankaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\st-bartsG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SudafricaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sudan del SurG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SudanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SueciaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuizaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SurinameG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TailandiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaiwanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TayikistanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tibetG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Timor-LesteG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TogoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tokelauG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TongaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transnistriaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trinidad y TobagoG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TunezG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TurkmenistanG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turks-and-caicosG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TurquiaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Islas MarshallG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Omán.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

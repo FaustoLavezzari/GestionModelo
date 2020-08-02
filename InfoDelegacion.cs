@@ -24,7 +24,7 @@ namespace GestiónModelo
 
         private void InfoDelegacion_Load(object sender, EventArgs e)
         {
-            Bandera.Image = delegacion.getBandera();
+            Bandera.Image =(Image) GestiónModelo.BanderasGrandes.ResourceManager.GetObject(delegacion.getNombre() + "G");
             Nombre.Text = delegacion.getNombre();
             
             if (delegacion.getAsistencia())

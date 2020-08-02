@@ -187,6 +187,12 @@
   <data name="Banderas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\banderas.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="BanderasGrandes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\banderasgrandes.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="BanderasGrandes_Designer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\banderasgrandes.designer.cs;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="Banderas_Designer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\banderas.designer.cs;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
