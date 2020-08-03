@@ -30,9 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Delegaciones = new System.Windows.Forms.ListView();
+            this.filtro = new System.Windows.Forms.ComboBox();
+            this.control = new System.Windows.Forms.ListView();
             this.Delegacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Discurso = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Respuestas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Puntos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buscador = new System.Windows.Forms.TextBox();
             this.panel_principal = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,50 +55,84 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.Delegaciones);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.filtro);
+            this.panel1.Controls.Add(this.control);
+            this.panel1.Controls.Add(this.buscador);
             this.panel1.Location = new System.Drawing.Point(12, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 768);
+            this.panel1.Size = new System.Drawing.Size(280, 768);
             this.panel1.TabIndex = 0;
             // 
-            // Delegaciones
+            // filtro
             // 
-            this.Delegaciones.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Delegacion});
-            this.Delegaciones.HideSelection = false;
-            this.Delegaciones.Location = new System.Drawing.Point(4, 53);
-            this.Delegaciones.Name = "Delegaciones";
-            this.Delegaciones.Size = new System.Drawing.Size(206, 686);
-            this.Delegaciones.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.Delegaciones.TabIndex = 1;
-            this.Delegaciones.UseCompatibleStateImageBehavior = false;
-            this.Delegaciones.View = System.Windows.Forms.View.SmallIcon;
-            this.Delegaciones.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Delegaciones_MouseClick);
+            this.filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filtro.FormattingEnabled = true;
+            this.filtro.Items.AddRange(new object[] {
+            "Todos",
+            "Presentes",
+            "Sin leer Discurso"});
+            this.filtro.Location = new System.Drawing.Point(171, 25);
+            this.filtro.Name = "filtro";
+            this.filtro.Size = new System.Drawing.Size(105, 21);
+            this.filtro.TabIndex = 9;
+            this.filtro.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // control
+            // 
+            this.control.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Delegacion,
+            this.Discurso,
+            this.Respuestas,
+            this.Puntos});
+            this.control.HideSelection = false;
+            this.control.Location = new System.Drawing.Point(3, 52);
+            this.control.Name = "control";
+            this.control.Size = new System.Drawing.Size(273, 687);
+            this.control.Sorting = System.Windows.Forms.SortOrder.Descending;
+            this.control.TabIndex = 1;
+            this.control.UseCompatibleStateImageBehavior = false;
+            this.control.View = System.Windows.Forms.View.Details;
+            this.control.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.control_ColumnClick);
+            this.control.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Delegaciones_MouseClick);
             // 
             // Delegacion
             // 
             this.Delegacion.Text = "Delegaciones";
-            this.Delegacion.Width = 200;
+            this.Delegacion.Width = 105;
             // 
-            // textBox1
+            // Discurso
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 20);
-            this.textBox1.TabIndex = 0;
+            this.Discurso.Text = "Discurso";
+            this.Discurso.Width = 53;
+            // 
+            // Respuestas
+            // 
+            this.Respuestas.Text = "Respuestas";
+            this.Respuestas.Width = 69;
+            // 
+            // Puntos
+            // 
+            this.Puntos.Text = "Puntos";
+            // 
+            // buscador
+            // 
+            this.buscador.Location = new System.Drawing.Point(3, 26);
+            this.buscador.Name = "buscador";
+            this.buscador.Size = new System.Drawing.Size(162, 20);
+            this.buscador.TabIndex = 0;
+            this.buscador.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel_principal
             // 
             this.panel_principal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel_principal.Location = new System.Drawing.Point(231, 64);
+            this.panel_principal.Location = new System.Drawing.Point(298, 64);
             this.panel_principal.Name = "panel_principal";
-            this.panel_principal.Size = new System.Drawing.Size(695, 673);
+            this.panel_principal.Size = new System.Drawing.Size(628, 673);
             this.panel_principal.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(231, 12);
+            this.button1.Location = new System.Drawing.Point(393, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 46);
             this.button1.TabIndex = 2;
@@ -104,7 +142,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(393, 12);
+            this.button2.Location = new System.Drawing.Point(545, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 46);
             this.button2.TabIndex = 3;
@@ -113,7 +151,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(539, 12);
+            this.button3.Location = new System.Drawing.Point(691, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 46);
             this.button3.TabIndex = 2;
@@ -153,9 +191,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(968, 90);
+            this.button4.Location = new System.Drawing.Point(967, 89);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 45);
+            this.button4.Size = new System.Drawing.Size(161, 45);
             this.button4.TabIndex = 7;
             this.button4.Text = "Hacer Interpelación";
             this.button4.UseVisualStyleBackColor = true;
@@ -190,7 +228,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox buscador;
         private System.Windows.Forms.Panel panel_principal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -201,9 +239,13 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Panel panel_crono;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ListView Delegaciones;
+        private System.Windows.Forms.ListView control;
         private System.Windows.Forms.ColumnHeader Delegacion;
         private System.Windows.Forms.Panel panel_del_Estrado;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox filtro;
+        private System.Windows.Forms.ColumnHeader Discurso;
+        private System.Windows.Forms.ColumnHeader Respuestas;
+        private System.Windows.Forms.ColumnHeader Puntos;
     }
 }

@@ -51,12 +51,16 @@ namespace GestiónModelo
         }
 
         private void asistencia_Load(object sender, EventArgs e)
-        {
+        {  
+          
             checkedListBox1.Items.Clear();
             foreach (var item in paises.Values.ToList()) // cargo lista de paises en el diccionario
             {
                 checkedListBox1.Items.Add(item.getNombre(), item.getAsistencia());
             }
+            checkedListBox1_SelectedIndexChanged(sender, e);
+
+
         }
 
 

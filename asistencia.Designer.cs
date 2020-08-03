@@ -46,7 +46,7 @@
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(44, 202);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(594, 409);
+            this.checkedListBox1.Size = new System.Drawing.Size(534, 409);
             this.checkedListBox1.Sorted = true;
             this.checkedListBox1.TabIndex = 0;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
@@ -258,7 +258,7 @@
             // 
             // select
             // 
-            this.select.Location = new System.Drawing.Point(481, 156);
+            this.select.Location = new System.Drawing.Point(424, 147);
             this.select.Name = "select";
             this.select.Size = new System.Drawing.Size(76, 23);
             this.select.TabIndex = 3;
@@ -288,7 +288,7 @@
             // 
             // clean
             // 
-            this.clean.Location = new System.Drawing.Point(563, 157);
+            this.clean.Location = new System.Drawing.Point(503, 147);
             this.clean.Name = "clean";
             this.clean.Size = new System.Drawing.Size(76, 23);
             this.clean.TabIndex = 6;
@@ -309,7 +309,7 @@
             // 
             this.asist_prom.AutoSize = true;
             this.asist_prom.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.asist_prom.Location = new System.Drawing.Point(530, 49);
+            this.asist_prom.Location = new System.Drawing.Point(450, 35);
             this.asist_prom.Name = "asist_prom";
             this.asist_prom.Size = new System.Drawing.Size(96, 55);
             this.asist_prom.TabIndex = 9;
@@ -318,7 +318,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(524, 104);
+            this.label3.Location = new System.Drawing.Point(444, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 10;
@@ -338,7 +338,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(695, 702);
+            this.ClientSize = new System.Drawing.Size(628, 673);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.asist_prom);

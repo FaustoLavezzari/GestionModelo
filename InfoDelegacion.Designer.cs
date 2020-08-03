@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.subir_est = new System.Windows.Forms.Button();
+            this.btn_discurso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Bandera)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,11 +193,23 @@
             this.subir_est.UseVisualStyleBackColor = true;
             this.subir_est.Click += new System.EventHandler(this.subir_est_Click);
             // 
+            // btn_discurso
+            // 
+            this.btn_discurso.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_discurso.Location = new System.Drawing.Point(347, 315);
+            this.btn_discurso.Name = "btn_discurso";
+            this.btn_discurso.Size = new System.Drawing.Size(75, 41);
+            this.btn_discurso.TabIndex = 18;
+            this.btn_discurso.Text = "Marcar Discurso";
+            this.btn_discurso.UseVisualStyleBackColor = false;
+            this.btn_discurso.Click += new System.EventHandler(this.button1_Click);
+            // 
             // InfoDelegacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 663);
+            this.Controls.Add(this.btn_discurso);
             this.Controls.Add(this.subir_est);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label6);
@@ -241,5 +254,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button subir_est;
+        private System.Windows.Forms.Button btn_discurso;
     }
 }

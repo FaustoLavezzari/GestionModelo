@@ -47,5 +47,7 @@ namespace GestiónModelo
         public int getInterpelaciones() { return interpelaciones; }
         public int getPregResp() { return pregResp; }
         public bool getAsistencia() { return asistencia; }
+        public Valoracion getValoracion() { return valoracion; }
+
     }
 }

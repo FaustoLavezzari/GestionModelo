@@ -12,15 +12,20 @@ namespace GestiónModelo
 {
     public partial class InfoDelegacion : Form
     {
+        
         private Delegacion delegacion;   
         private Topico topico_activo;
         private Panel panel_Est;
-        public InfoDelegacion(Delegacion delegacion, Topico topico_activo, Panel panel_estrado)
+        private Sesion sesion;
+        private PantallaPrincipal pant_p;
+        public InfoDelegacion(Delegacion delegacion, Topico topico_activo, Panel panel_estrado, Sesion sesion, PantallaPrincipal pp )
         {
             InitializeComponent();
             panel_Est = panel_estrado;
             this.delegacion = delegacion;
             this.topico_activo = topico_activo;
+            this.sesion = sesion;
+            pant_p = pp;
         }
 
         private void InfoDelegacion_Load(object sender, EventArgs e)
@@ -37,7 +42,7 @@ namespace GestiónModelo
                 Discurso.Text = "Leido";
             else
                 Discurso.Text = "Sin leer";
-
+           
             InterpelacionesRealizadas.Text =  delegacion.getInterpelaciones().ToString();
             InterpelacionesRespondidas.Text = delegacion.getPregResp().ToString();
         }
@@ -57,6 +62,23 @@ namespace GestiónModelo
             Del_Estrado del_est = new Del_Estrado();
             del_est.CargarDelegacion(delegacion);
             AbrirFormHija(del_est);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (btn_discurso.Text == "Marcar Discurso")
+            {
+                sesion.getTopicoActivo().discursosLeidos().Add(delegacion);
+                btn_discurso.Text = "Desmarcar Discurso";
+                btn_discurso.BackColor = Color.YellowGreen;
+                pant_p.comboBox1_SelectedIndexChanged(sender, e);
+            }
+            else {
+                sesion.getTopicoActivo().discursosLeidos().Remove(delegacion);
+                btn_discurso.Text = "Marcar Discurso";
+                btn_discurso.BackColor = DefaultBackColor;
+                pant_p.comboBox1_SelectedIndexChanged(sender, e);
+            }
         }
     }
 }

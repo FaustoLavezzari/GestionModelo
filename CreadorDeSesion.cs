@@ -87,6 +87,7 @@ namespace GestiónModelo
             Sesion sesion = new Sesion(paises, topicos);
             PantallaPrincipal pantalla = new PantallaPrincipal(sesion);
             pantalla.Show();
+            seleccion = null;
             this.Close();
         }
 
@@ -128,7 +129,7 @@ namespace GestiónModelo
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {  seleccionadorDePaises.Items.Clear();
-            if (comboBox1.Text == "☐")
+            if (comboBox1.Text == "☐ Todos")
             {
                 foreach (var item in seleccion)
                 {
@@ -136,7 +137,7 @@ namespace GestiónModelo
                 }
             }
             else
-            {    if(comboBox1.Text == "☑")
+            {    if(comboBox1.Text == "☑ Seleccionados")
                 { 
                     foreach (var item in seleccion)
                     {
