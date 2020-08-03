@@ -13,6 +13,8 @@ namespace GestiónModelo
     public partial class PantallaPrincipal : Form
     {
         private Sesion sesion;
+        private Delegacion del_selec;
+        private InfoDelegacion info_delegacion;
             
         public PantallaPrincipal(Sesion sesion)
         {
@@ -87,14 +89,13 @@ namespace GestiónModelo
             asist.Show();
 
             
-        }
-
-        
+        }        
 
         private void Delegaciones_MouseClick(object sender, MouseEventArgs e)
         {            
-            Delegacion delegacion_seleccionada = sesion.getDelegacion(Delegaciones.SelectedItems[0].Text);                       
-            InfoDelegacion info_del = new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo(), panel_del_Estrado); 
+            Delegacion delegacion_seleccionada = sesion.getDelegacion(Delegaciones.SelectedItems[0].Text);
+            del_selec = delegacion_seleccionada;
+            InfoDelegacion info_del = new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo(), panel_del_Estrado);
             AbrirFormHija3(info_del);            
         }
 
@@ -106,6 +107,12 @@ namespace GestiónModelo
         private void terminarPrograma(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void interpelacion_Click(object sender, EventArgs e)
+        {
+            Interpelacion pregunta = new Interpelacion(del_selec, sesion);
+            pregunta.Show();            
         }
     }
 }
