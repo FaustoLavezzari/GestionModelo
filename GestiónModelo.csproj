@@ -77,6 +77,12 @@
     <Compile Include="Interpelacion.Designer.cs">
       <DependentUpon>Interpelacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoDelegacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoDelegacion.Designer.cs">
+      <DependentUpon>InfoDelegacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Delegacion_Estrado.resx">
       <DependentUpon>Delegacion_Estrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoDelegacion.resx">
+      <DependentUpon>InfoDelegacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interpelacion.resx">
       <DependentUpon>Interpelacion.cs</DependentUpon>
