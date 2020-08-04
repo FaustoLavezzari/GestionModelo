@@ -49,5 +49,11 @@ namespace GestiónModelo
         public bool getAsistencia() { return asistencia; }
         public Valoracion getValoracion() { return valoracion; }
 
+        public Delegacion copiarDelegacion() 
+        {
+            Delegacion aux = new Delegacion(this.getNombre(), this.getBandera());
+            return aux;
+        }
+
     }
 }

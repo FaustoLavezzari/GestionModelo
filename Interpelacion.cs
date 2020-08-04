@@ -39,8 +39,7 @@ namespace GestiónModelo
 
             this.Close();
             ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
-            this.Dispose();
-            
+            this.Dispose();          
 
         }
     }

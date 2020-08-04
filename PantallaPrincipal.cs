@@ -15,11 +15,11 @@ namespace GestiónModelo
 {
     public partial class PantallaPrincipal : Form
     {
-
-        Delegacion delegacion_estrado;
+        //Delegacion delegacion_estrado;
+        private InfoDelegacion info_del;
+        private Delegacion en_estrado;
         private Sesion sesion;
-        private Delegacion del_selec;
-        private InfoDelegacion info_delegacion;
+        private Delegacion del_selec;        
 
         public PantallaPrincipal(Sesion sesion)
         {
@@ -94,18 +94,18 @@ namespace GestiónModelo
             this.panel_principal.Controls.Add(asist);//se agrega al panel
             this.panel_principal.Tag = asist;
             asist.Show();
-
-
         }
 
         private void Delegaciones_MouseClick(object sender, MouseEventArgs e)
         {
             Delegacion delegacion_seleccionada = sesion.getDelegacion(control.SelectedItems[0].Text);
             del_selec = delegacion_seleccionada;
-            InfoDelegacion info_del = new InfoDelegacion(delegacion_seleccionada);
-            AbrirFormHija3(info_del);
-            delegacion_estrado = delegacion_seleccionada;
-
+            if (en_estrado == null)
+                info_del = new InfoDelegacion(delegacion_seleccionada, delegacion_seleccionada);
+            else
+                info_del = new InfoDelegacion(delegacion_seleccionada, en_estrado);
+            en_estrado = info_del.getDelEstrado();
+            AbrirFormHija3(info_del);            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,10 +120,8 @@ namespace GestiónModelo
 
         private void interpelacion_Click(object sender, EventArgs e)
         {
-            Interpelacion pregunta = new Interpelacion(del_selec, sesion);
-            pregunta.Show();
-        
-           
+            Interpelacion pregunta = new Interpelacion(en_estrado, sesion);
+            pregunta.Show();            
         }
         private void cargar_ItemView(Delegacion delegacion, int cont)// delegacion y posicion a añadir a listView
         {   
@@ -133,10 +131,8 @@ namespace GestiónModelo
             listViewItem.SubItems.Add(simb);
             listViewItem.SubItems.Add(delegacion.getInterpelaciones().ToString());
             listViewItem.SubItems.Add((delegacion.getValoracion().getPuntajeTotal()).ToString());
-
             control.Items.Add(listViewItem);
         }
-        //
 
         public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)// se usara de actualizacion al listview
         {     control.Items.Clear();
@@ -156,8 +152,6 @@ namespace GestiónModelo
                         cargar_ItemView(delegacion, cont);
                         cont++;
                     }
-
-
                 }
             }
             else if (filtro.Text == "Sin leer Discurso")
@@ -170,8 +164,6 @@ namespace GestiónModelo
                         cargar_ItemView(delegacion, cont);
                         cont++;
                     }
-
-
                 }
             }
             else 
@@ -182,11 +174,8 @@ namespace GestiónModelo
                       cargar_ItemView(delegacion, cont);
                       cont++;
                    }
-            }
-        
+            }        
             control.SmallImageList = iconos;
-
-
         }
 
         private void control_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -238,15 +227,12 @@ namespace GestiónModelo
                 string textoNormalizado = texto.Normalize(NormalizationForm.FormD);
                 string textoSinAcento = reg1.Replace(textoNormalizado, "");
 
-
-
                 if (nombreSinAcento.StartsWith(textoSinAcento))   
                 {
                     iconos.Images.Add(delegacion.getBandera());
                     cargar_ItemView(delegacion, cont);
                    cont++;
-                }
-             
+                }            
 
             }
            

@@ -32,10 +32,6 @@ namespace GestiónModelo
             delegacion_name.Text = null;
             bajar.Visible = false;
             ((Button)ActiveForm.Controls.Find("btn_interp", true)[0]).Visible = false;
-
-
-
-
         }
     }
 }

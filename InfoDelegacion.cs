@@ -13,22 +13,23 @@ namespace GestiónModelo
     public partial class InfoDelegacion : Form
     {
         
-        private Delegacion delegacion;   
+        private Delegacion delegacion;
+        private Delegacion delegacion_en_estrado;
         private Topico topico_activo;
         private Panel panel_Est;
         private Sesion sesion;
        
-        public InfoDelegacion(Delegacion delegacion)
+        public InfoDelegacion(Delegacion delegacion, Delegacion delegacion_en_estrado)
         {
             InitializeComponent();
             panel_Est = (Panel)PantallaPrincipal.ActiveForm.Controls.Find("panel_del_Estrado", true)[0];
             this.delegacion = delegacion;
-           
+            this.delegacion_en_estrado = delegacion_en_estrado;
             this.sesion = ((PantallaPrincipal)ActiveForm).getSesion();
-            this.topico_activo =sesion.getTopicoActivo();
+            this.topico_activo = sesion.getTopicoActivo();
         }
 
-        private void InfoDelegacion_Load(object sender, EventArgs e)
+        public void InfoDelegacion_Load(object sender, EventArgs e)
         {
             Bandera.Image =(Image) GestiónModelo.BanderasGrandes.ResourceManager.GetObject(delegacion.getNombre() + "G");
             Nombre.Text = delegacion.getNombre();
@@ -59,8 +60,9 @@ namespace GestiónModelo
         }
         private void subir_est_Click(object sender, EventArgs e)
         {
+            delegacion_en_estrado = delegacion.copiarDelegacion();
             Del_Estrado del_est = new Del_Estrado();
-            del_est.CargarDelegacion(delegacion);
+            del_est.CargarDelegacion(delegacion);            
             AbrirFormHija(del_est);
             ((Button)ActiveForm.Controls.Find("btn_interp", true)[0]).Visible = true;
         }
@@ -80,6 +82,21 @@ namespace GestiónModelo
                 btn_discurso.BackColor = DefaultBackColor;
                 ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
             }
+        }
+
+        public Delegacion getDelEstrado()
+        {
+            return delegacion_en_estrado;
+        }
+
+        /*public Label getLabelRespondidas()
+        {
+            return InterpelacionesRespondidas;
+        }*/
+
+        public void refreshRespondidas()
+        {
+            InterpelacionesRespondidas.Refresh();
         }
     }
 }
