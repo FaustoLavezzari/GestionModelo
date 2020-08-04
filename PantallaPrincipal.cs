@@ -131,7 +131,7 @@ namespace GestiónModelo
             ListViewItem listViewItem = new ListViewItem(delegacion.getNombre(), cont);
             if (sesion.getTopicoActivo().leyoDiscurso(delegacion) == true) { simb = "✓"; }
             listViewItem.SubItems.Add(simb);
-            listViewItem.SubItems.Add((delegacion.getPregResp()).ToString());
+            listViewItem.SubItems.Add(delegacion.getInterpelaciones().ToString());
             listViewItem.SubItems.Add((delegacion.getValoracion().getPuntajeTotal()).ToString());
 
             control.Items.Add(listViewItem);
