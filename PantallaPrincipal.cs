@@ -136,7 +136,7 @@ namespace GestiónModelo
 
             control.Items.Add(listViewItem);
         }
-
+        //
 
         public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)// se usara de actualizacion al listview
         {     control.Items.Clear();
