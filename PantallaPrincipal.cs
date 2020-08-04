@@ -132,14 +132,13 @@ namespace GestiónModelo
             if (sesion.getTopicoActivo().leyoDiscurso(delegacion) == true) { simb = "✓"; }
             listViewItem.SubItems.Add(simb);
             listViewItem.SubItems.Add((delegacion.getPregResp()).ToString());
-            listViewItem.SubItems.Add((delegacion.getPregResp()).ToString());
             listViewItem.SubItems.Add((delegacion.getValoracion().getPuntajeTotal()).ToString());
 
             control.Items.Add(listViewItem);
         }
 
 
-        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)// se usara tambien como metodo actualizar listView
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)// se usara de actualizacion al listview
         {     control.Items.Clear();
             //Carga ListView de delegaciones
 
@@ -194,6 +193,8 @@ namespace GestiónModelo
         {
             this.control.ListViewItemSorter = new ListViewItemComparer(e.Column);
 
+            Console.WriteLine(e.Column);
+
         }
 
         // implementar el sorting manualmente / personalizado 
@@ -210,6 +211,7 @@ namespace GestiónModelo
             }
             public int Compare(object x, object y)
             {
+                if (col == 0) { object aux = x; x = y; y = aux; }
                 return String.Compare(((ListViewItem)y).SubItems[col].Text, ((ListViewItem)x).SubItems[col].Text);
             }
         }

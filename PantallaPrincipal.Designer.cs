@@ -88,7 +88,7 @@
             this.control.Location = new System.Drawing.Point(3, 52);
             this.control.Name = "control";
             this.control.Size = new System.Drawing.Size(273, 687);
-            this.control.Sorting = System.Windows.Forms.SortOrder.Descending;
+            this.control.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.control.TabIndex = 1;
             this.control.UseCompatibleStateImageBehavior = false;
             this.control.View = System.Windows.Forms.View.Details;
