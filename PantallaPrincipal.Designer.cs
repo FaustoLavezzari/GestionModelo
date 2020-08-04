@@ -48,7 +48,7 @@
             this.panel_crono = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel_del_Estrado = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_interp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,22 +189,23 @@
             this.panel_del_Estrado.Size = new System.Drawing.Size(225, 59);
             this.panel_del_Estrado.TabIndex = 6;
             // 
-            // button4
+            // btn_interp
             // 
-            this.button4.Location = new System.Drawing.Point(967, 89);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 45);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Hacer Interpelación";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.interpelacion_Click);
+            this.btn_interp.Location = new System.Drawing.Point(967, 89);
+            this.btn_interp.Name = "btn_interp";
+            this.btn_interp.Size = new System.Drawing.Size(161, 45);
+            this.btn_interp.TabIndex = 7;
+            this.btn_interp.Text = "Hacer Interpelación";
+            this.btn_interp.UseVisualStyleBackColor = true;
+            this.btn_interp.Visible = false;
+            this.btn_interp.Click += new System.EventHandler(this.interpelacion_Click);
             // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 749);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_interp);
             this.Controls.Add(this.panel_del_Estrado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_crono);
@@ -242,7 +243,7 @@
         private System.Windows.Forms.ListView control;
         private System.Windows.Forms.ColumnHeader Delegacion;
         private System.Windows.Forms.Panel panel_del_Estrado;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_interp;
         private System.Windows.Forms.ComboBox filtro;
         private System.Windows.Forms.ColumnHeader Discurso;
         private System.Windows.Forms.ColumnHeader Respuestas;

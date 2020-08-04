@@ -17,15 +17,15 @@ namespace GestiónModelo
         private Topico topico_activo;
         private Panel panel_Est;
         private Sesion sesion;
-        private PantallaPrincipal pant_p;
-        public InfoDelegacion(Delegacion delegacion, Topico topico_activo, Panel panel_estrado, Sesion sesion, PantallaPrincipal pp )
+       
+        public InfoDelegacion(Delegacion delegacion)
         {
             InitializeComponent();
-            panel_Est = panel_estrado;
+            panel_Est = (Panel)PantallaPrincipal.ActiveForm.Controls.Find("panel_del_Estrado", true)[0];
             this.delegacion = delegacion;
-            this.topico_activo = topico_activo;
-            this.sesion = sesion;
-            pant_p = pp;
+           
+            this.sesion = ((PantallaPrincipal)ActiveForm).getSesion();
+            this.topico_activo =sesion.getTopicoActivo();
         }
 
         private void InfoDelegacion_Load(object sender, EventArgs e)
@@ -62,6 +62,7 @@ namespace GestiónModelo
             Del_Estrado del_est = new Del_Estrado();
             del_est.CargarDelegacion(delegacion);
             AbrirFormHija(del_est);
+            ((Button)ActiveForm.Controls.Find("btn_interp", true)[0]).Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,13 +72,13 @@ namespace GestiónModelo
                 sesion.getTopicoActivo().discursosLeidos().Add(delegacion);
                 btn_discurso.Text = "Desmarcar Discurso";
                 btn_discurso.BackColor = Color.YellowGreen;
-                pant_p.comboBox1_SelectedIndexChanged(sender, e);
+                ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
             }
             else {
                 sesion.getTopicoActivo().discursosLeidos().Remove(delegacion);
                 btn_discurso.Text = "Marcar Discurso";
                 btn_discurso.BackColor = DefaultBackColor;
-                pant_p.comboBox1_SelectedIndexChanged(sender, e);
+                ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
             }
         }
     }

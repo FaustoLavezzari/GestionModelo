@@ -29,6 +29,7 @@ namespace GestiónModelo
 
         private void Sesión_Load(object sender, EventArgs e)
         {
+
             AbrirFormHija(new Temporizador());
             AbrirFormHija2(new Cronometro());
 
@@ -101,7 +102,7 @@ namespace GestiónModelo
         {
             Delegacion delegacion_seleccionada = sesion.getDelegacion(control.SelectedItems[0].Text);
             del_selec = delegacion_seleccionada;
-            InfoDelegacion info_del = new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo(), panel_del_Estrado, sesion, this);
+            InfoDelegacion info_del = new InfoDelegacion(delegacion_seleccionada);
             AbrirFormHija3(info_del);
             delegacion_estrado = delegacion_seleccionada;
 
@@ -121,6 +122,8 @@ namespace GestiónModelo
         {
             Interpelacion pregunta = new Interpelacion(del_selec, sesion);
             pregunta.Show();
+        
+           
         }
         private void cargar_ItemView(Delegacion delegacion, int cont)// delegacion y posicion a añadir a listView
         {   
@@ -136,9 +139,8 @@ namespace GestiónModelo
         }
 
 
-        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {   
-            control.Items.Clear();
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)// se usara tambien como metodo actualizar listView
+        {     control.Items.Clear();
             //Carga ListView de delegaciones
 
             ImageList iconos = new ImageList();
@@ -248,5 +250,6 @@ namespace GestiónModelo
            
             control.SmallImageList = iconos;
         }
+        public Sesion getSesion() { return sesion; }
     }
 }

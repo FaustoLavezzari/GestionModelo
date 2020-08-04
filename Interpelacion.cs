@@ -31,12 +31,17 @@ namespace GestiónModelo
             if (ses_aux.getDiccionarioPaises().TryGetValue(del_interpeladora.Text, out interpeladora))
             {
                 interpeladora.incrementarInterpelaciones();
-                en_estrado.incrementarRespuestas();                
+                en_estrado.incrementarRespuestas();
             }
             else
-                MessageBox.Show("Por favor ingrese un valor válido");
+            { MessageBox.Show("Por favor ingrese un valor válido"); }
+             
 
             this.Close();
+            ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
+            this.Dispose();
+            
+
         }
     }
 }

@@ -26,16 +26,16 @@ namespace GestiónModelo
             delegacion_name.Text = dele.getNombre();   
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//bajar del estrado
         {
             pictureBox1.Image = null;
             delegacion_name.Text = null;
             bajar.Visible = false;
-           
-          
-         
-         
-      
+            ((Button)ActiveForm.Controls.Find("btn_interp", true)[0]).Visible = false;
+
+
+
+
         }
     }
 }

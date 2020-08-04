@@ -47,7 +47,7 @@ namespace GestiónModelo
 
             }
             asist_prom.Text = ((((presentes.Count + 0.0) / total) * 100).ToString() + "   ").Substring(0, 3) + "%";
-
+            ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
         }
 
         private void asistencia_Load(object sender, EventArgs e)
