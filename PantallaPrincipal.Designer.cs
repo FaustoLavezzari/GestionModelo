@@ -34,7 +34,7 @@
             this.control = new System.Windows.Forms.ListView();
             this.Delegacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Discurso = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Respuestas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Interpelaciones = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Puntos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buscador = new System.Windows.Forms.TextBox();
             this.panel_principal = new System.Windows.Forms.Panel();
@@ -82,7 +82,7 @@
             this.control.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Delegacion,
             this.Discurso,
-            this.Respuestas,
+            this.Interpelaciones,
             this.Puntos});
             this.control.HideSelection = false;
             this.control.Location = new System.Drawing.Point(3, 52);
@@ -98,17 +98,17 @@
             // Delegacion
             // 
             this.Delegacion.Text = "Delegaciones";
-            this.Delegacion.Width = 105;
+            this.Delegacion.Width = 91;
             // 
             // Discurso
             // 
             this.Discurso.Text = "Discurso";
             this.Discurso.Width = 53;
             // 
-            // Respuestas
+            // Interpelaciones
             // 
-            this.Respuestas.Text = "Respuestas";
-            this.Respuestas.Width = 69;
+            this.Interpelaciones.Text = "Interpelaciones";
+            this.Interpelaciones.Width = 84;
             // 
             // Puntos
             // 
@@ -246,7 +246,7 @@
         private System.Windows.Forms.Button btn_interp;
         private System.Windows.Forms.ComboBox filtro;
         private System.Windows.Forms.ColumnHeader Discurso;
-        private System.Windows.Forms.ColumnHeader Respuestas;
+        private System.Windows.Forms.ColumnHeader Interpelaciones;
         private System.Windows.Forms.ColumnHeader Puntos;
     }
 }
