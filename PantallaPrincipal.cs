@@ -15,11 +15,8 @@ namespace GestiónModelo
 {
     public partial class PantallaPrincipal : Form
     {
-
-        Delegacion delegacion_estrado;
         private Sesion sesion;
-        private Delegacion del_selec;
-        private InfoDelegacion info_delegacion;
+        private Delegacion delegacion_seleccionada;
 
         public PantallaPrincipal(Sesion sesion)
         {
@@ -46,8 +43,9 @@ namespace GestiónModelo
                 cont++;
             }
             control.SmallImageList = iconos;
-        }
 
+            MostrarControlesInfoDelegacion(false);           
+        }
 
         private void AbrirFormHija(object form_hija)
         {
@@ -74,41 +72,104 @@ namespace GestiónModelo
         }
         private void AbrirFormHija3(object form_hija)
         {
-            List<Form> abiertos = new List<Form>();
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is InfoDelegacion || form is asistencia)
-                {
-                    abiertos.Add(form);
-                }
-            }
-            foreach (Form form1 in abiertos)
-            {
-                form1.Close();
-            }
-            panel_principal.Controls.Clear();
+            MostrarControlesInfoDelegacion(false);
             Form asist = form_hija as Form; //se crea un formulario asist
             asist.TopLevel = false;// es un formulario secundario
             asist.Dock = DockStyle.Fill;//se acopla al panel
             this.panel_principal.Controls.Add(asist);//se agrega al panel
             this.panel_principal.Tag = asist;
             asist.Show();
-
-
         }
 
+        // Sección Info delegación
+        private void MostrarControlesInfoDelegacion(bool activar_desactivar)
+        {
+            foreach (Control control in panel_principal.Controls)
+            {
+
+                if (activar_desactivar)
+                {
+                    control.Visible = true;
+                }
+                else
+                {
+                    control.Visible = false;
+                }
+                if (control is Form && activar_desactivar)
+                {
+                    panel_principal.Controls.Remove(control);
+                    Form form = (Form)control;
+                    form.Close();
+                }
+            }
+
+        }
         private void Delegaciones_MouseClick(object sender, MouseEventArgs e)
         {
-            Delegacion delegacion_seleccionada = sesion.getDelegacion(control.SelectedItems[0].Text);
-            del_selec = delegacion_seleccionada;
-            InfoDelegacion info_del = new InfoDelegacion(delegacion_seleccionada, sesion.getTopicoActivo(), panel_del_Estrado, sesion, this);
-            AbrirFormHija3(info_del);
-            delegacion_estrado = delegacion_seleccionada;
+            MostrarControlesInfoDelegacion(true);
+            delegacion_seleccionada = sesion.getDelegacion(control.SelectedItems[0].Text);
+            
+            Bandera.Image = (Image)GestiónModelo.BanderasGrandes.ResourceManager.GetObject(delegacion_seleccionada.getNombre() + "G");
+            Nombre.Text = delegacion_seleccionada.getNombre();
 
+            if (delegacion_seleccionada.getAsistencia())
+                Asistencia.Text = "Presente";
+            else
+                Asistencia.Text = "Ausente";
+
+            if (sesion.getTopicoActivo().leyoDiscurso(delegacion_seleccionada))
+                LeyoDiscurso.Text = "Leido";
+            else
+                LeyoDiscurso.Text = "Sin leer";
+
+            InterpelacionesRealizadas.Text = delegacion_seleccionada.getInterpelaciones().ToString();
+            InterpelacionesRespondidas.Text = delegacion_seleccionada.getPregResp().ToString();
         }
 
+        private void AbrirFormHija4(object form_hija)
+        {
+            if (this.panel_del_Estrado.Controls.Count > 0)
+                this.panel_del_Estrado.Controls.RemoveAt(0);
+            Form del_est = form_hija as Form;
+            del_est.TopLevel = false;
+            del_est.Dock = DockStyle.Fill;
+            this.panel_del_Estrado.Controls.Add(del_est);
+            this.panel_del_Estrado.Tag = del_est;
+            del_est.Show();
+        }
+
+        private void SubirAlEstrado(object sender, EventArgs e)
+        {
+            Del_Estrado del_est = new Del_Estrado();
+            del_est.CargarDelegacion(sesion.getDelegacion(delegacion_seleccionada.getNombre()));
+            AbrirFormHija4(del_est);
+        }
+
+        private void MarcarDiscurso(object sender, EventArgs e)
+        {
+            if (btn_discurso.Text == "Marcar Discurso")
+            {
+                sesion.getTopicoActivo().discursosLeidos().Add(delegacion_seleccionada);
+                btn_discurso.Text = "Desmarcar Discurso";
+                btn_discurso.BackColor = Color.YellowGreen;
+                comboBox1_SelectedIndexChanged(sender, e);
+
+                LeyoDiscurso.Text = "Leido";
+            }
+            else
+            {
+                sesion.getTopicoActivo().discursosLeidos().Remove(delegacion_seleccionada);
+                btn_discurso.Text = "Marcar Discurso";
+                btn_discurso.BackColor = DefaultBackColor;
+                comboBox1_SelectedIndexChanged(sender, e);
+
+                LeyoDiscurso.Text = "Sin leer";
+            }
+        }
+        // Fin sección info delegación
         private void button1_Click(object sender, EventArgs e)
         {
+            MostrarControlesInfoDelegacion(false);
             AbrirFormHija3(new asistencia(sesion.getDiccionarioPaises()));
         }
 
@@ -119,7 +180,7 @@ namespace GestiónModelo
 
         private void interpelacion_Click(object sender, EventArgs e)
         {
-            Interpelacion pregunta = new Interpelacion(del_selec, sesion);
+            Interpelacion pregunta = new Interpelacion(delegacion_seleccionada, sesion);
             pregunta.Show();
         }
         private void cargar_ItemView(Delegacion delegacion, int cont)// delegacion y posicion a añadir a listView
@@ -134,6 +195,7 @@ namespace GestiónModelo
 
             control.Items.Add(listViewItem);
         }
+    
 
 
         public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -184,8 +246,6 @@ namespace GestiónModelo
             }
         
             control.SmallImageList = iconos;
-
-
         }
 
         private void control_ColumnClick(object sender, ColumnClickEventArgs e)
