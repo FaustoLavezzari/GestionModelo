@@ -82,6 +82,8 @@ namespace GestiónModelo
                 btn_discurso.BackColor = DefaultBackColor;
                 ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
             }
+
+            InfoDelegacion_Load(new object(), new EventArgs());
         }
 
         public Delegacion getDelEstrado()

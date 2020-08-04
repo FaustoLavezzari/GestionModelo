@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -121,7 +122,8 @@ namespace GestiónModelo
         private void interpelacion_Click(object sender, EventArgs e)
         {
             Interpelacion pregunta = new Interpelacion(en_estrado, sesion);
-            pregunta.Show();            
+            pregunta.Show();
+           
         }
         private void cargar_ItemView(Delegacion delegacion, int cont)// delegacion y posicion a añadir a listView
         {   

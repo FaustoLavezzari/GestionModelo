@@ -35,12 +35,18 @@ namespace GestiónModelo
             }
             else
             { MessageBox.Show("Por favor ingrese un valor válido"); }
-             
 
             this.Close();
-            ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
-            this.Dispose();          
-
+            Panel panel = (Panel)PantallaPrincipal.ActiveForm.Controls.Find("panel_principal", true)[0];
+            foreach (Control control in panel.Controls)
+            {
+                if (control is InfoDelegacion)
+                {
+                    InfoDelegacion info = (InfoDelegacion)control;
+                    info.InfoDelegacion_Load(new object(), new EventArgs());
+                }
+            }
+            this.Dispose();
         }
     }
 }
