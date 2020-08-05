@@ -55,6 +55,7 @@ namespace GestiónModelo
             InterpelacionesRealizadas.Text =  delegacion.getInterpelaciones().ToString();
             InterpelacionesRespondidas.Text = delegacion.getPregResp().ToString();
 
+            ListViewValoraciones.Items.Clear();
             ListViewValoraciones.Columns.Add("Puntaje", 60, HorizontalAlignment.Center);
             Dictionary<string, float> valoraciones = delegacion.getValoracion().getValoraciones();
             foreach(string motivo in valoraciones.Keys)
@@ -110,24 +111,23 @@ namespace GestiónModelo
         }
 
         private void CargarValoracionEnListView(String motivo, float puntaje)
-        {            
-            ListViewItem valoracionItem = new ListViewItem(motivo);
-            valoracionItem.SubItems.Add(puntaje.ToString());
-            if (puntaje < 0)
-                valoracionItem.SubItems[0].ForeColor = Color.Red;
-            else
-                valoracionItem.SubItems[0].ForeColor = Color.Green;
-            ListViewValoraciones.Items.Add(valoracionItem);
+        {  
+             ListViewItem valoracionItem = new ListViewItem(motivo);
+             valoracionItem.SubItems.Add(puntaje.ToString());
+             if (puntaje < 0)
+             valoracionItem.SubItems[0].ForeColor = Color.Red;
+             else
+             valoracionItem.SubItems[0].ForeColor = Color.Green;
+             ListViewValoraciones.Items.Add(valoracionItem);
 
-            MotivoIngresado.Text = null;
-            PuntajeIngresado.Value = 0;
-
+             MotivoIngresado.Text = null;
+             PuntajeIngresado.Value = 0;           
         }
 
         private void Valorar(object sender, EventArgs e)
         {
             Dictionary<string, float> valoraciones = delegacion.getValoracion().getValoraciones();
-            string motivo = MotivoIngresado.Text;
+            string motivo = MotivoIngresado.Text.Trim();
             float puntaje =(float) PuntajeIngresado.Value;
             if (!valoraciones.ContainsKey(motivo))
             {

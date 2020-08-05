@@ -46,6 +46,7 @@ namespace GestiónModelo
                     info.InfoDelegacion_Load(new object(), new EventArgs());
                 }
             }
+            ((PantallaPrincipal)PantallaPrincipal.ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
             this.Dispose();
         }
     }

@@ -43,9 +43,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.ListViewValoraciones = new System.Windows.Forms.ListView();
+            this.Motivo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.subir_est = new System.Windows.Forms.Button();
             this.btn_discurso = new System.Windows.Forms.Button();
-            this.Motivo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MotivoIngresado = new System.Windows.Forms.TextBox();
             this.PuntajeIngresado = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -195,6 +195,11 @@
             this.ListViewValoraciones.UseCompatibleStateImageBehavior = false;
             this.ListViewValoraciones.View = System.Windows.Forms.View.Details;
             // 
+            // Motivo
+            // 
+            this.Motivo.Text = "Motivo";
+            this.Motivo.Width = 470;
+            // 
             // subir_est
             // 
             this.subir_est.Location = new System.Drawing.Point(388, 174);
@@ -215,11 +220,6 @@
             this.btn_discurso.Text = "Marcar Discurso";
             this.btn_discurso.UseVisualStyleBackColor = false;
             this.btn_discurso.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Motivo
-            // 
-            this.Motivo.Text = "Motivo";
-            this.Motivo.Width = 470;
             // 
             // MotivoIngresado
             // 
