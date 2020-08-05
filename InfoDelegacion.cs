@@ -40,10 +40,18 @@ namespace GestiónModelo
                 Asistencia.Text = "Ausente";
 
             if (topico_activo.leyoDiscurso(delegacion))
+            {
                 Discurso.Text = "Leido";
+                btn_discurso.Text = "Desmarcar Discurso";
+                btn_discurso.BackColor = Color.YellowGreen;
+            }
             else
+            {
                 Discurso.Text = "Sin leer";
-           
+                btn_discurso.Text = "Marcar Discurso";
+                btn_discurso.BackColor = DefaultBackColor;
+            }
+                        
             InterpelacionesRealizadas.Text =  delegacion.getInterpelaciones().ToString();
             InterpelacionesRespondidas.Text = delegacion.getPregResp().ToString();
         }
