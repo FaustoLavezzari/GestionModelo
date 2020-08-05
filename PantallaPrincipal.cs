@@ -39,6 +39,9 @@ namespace GestiónModelo
             ImageList iconos = new ImageList();
             iconos.ImageSize = new Size(30, 30);
 
+            control.Columns.Add("Discurso", 53, HorizontalAlignment.Center);
+            control.Columns.Add("Interpelaciones", 84, HorizontalAlignment.Center);
+            control.Columns.Add("Puntos", 60, HorizontalAlignment.Center);
             int cont = 0;
             foreach (Delegacion delegacion in sesion.getListaPaises())
             {

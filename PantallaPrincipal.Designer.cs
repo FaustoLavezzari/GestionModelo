@@ -33,9 +33,6 @@
             this.filtro = new System.Windows.Forms.ComboBox();
             this.control = new System.Windows.Forms.ListView();
             this.Delegacion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Discurso = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Interpelaciones = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Puntos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buscador = new System.Windows.Forms.TextBox();
             this.panel_principal = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,7 +57,7 @@
             this.panel1.Controls.Add(this.buscador);
             this.panel1.Location = new System.Drawing.Point(12, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 768);
+            this.panel1.Size = new System.Drawing.Size(299, 768);
             this.panel1.TabIndex = 0;
             // 
             // filtro
@@ -80,14 +77,12 @@
             // control
             // 
             this.control.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Delegacion,
-            this.Discurso,
-            this.Interpelaciones,
-            this.Puntos});
+            this.Delegacion});
             this.control.HideSelection = false;
+            this.control.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.control.Location = new System.Drawing.Point(3, 52);
             this.control.Name = "control";
-            this.control.Size = new System.Drawing.Size(273, 687);
+            this.control.Size = new System.Drawing.Size(296, 687);
             this.control.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.control.TabIndex = 1;
             this.control.UseCompatibleStateImageBehavior = false;
@@ -100,20 +95,6 @@
             this.Delegacion.Text = "Delegaciones";
             this.Delegacion.Width = 91;
             // 
-            // Discurso
-            // 
-            this.Discurso.Text = "Discurso";
-            this.Discurso.Width = 53;
-            // 
-            // Interpelaciones
-            // 
-            this.Interpelaciones.Text = "Interpelaciones";
-            this.Interpelaciones.Width = 84;
-            // 
-            // Puntos
-            // 
-            this.Puntos.Text = "Puntos";
-            // 
             // buscador
             // 
             this.buscador.Location = new System.Drawing.Point(3, 26);
@@ -125,9 +106,9 @@
             // panel_principal
             // 
             this.panel_principal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel_principal.Location = new System.Drawing.Point(298, 64);
+            this.panel_principal.Location = new System.Drawing.Point(317, 64);
             this.panel_principal.Name = "panel_principal";
-            this.panel_principal.Size = new System.Drawing.Size(628, 673);
+            this.panel_principal.Size = new System.Drawing.Size(609, 673);
             this.panel_principal.TabIndex = 1;
             // 
             // button1
@@ -245,8 +226,5 @@
         private System.Windows.Forms.Panel panel_del_Estrado;
         private System.Windows.Forms.Button btn_interp;
         private System.Windows.Forms.ComboBox filtro;
-        private System.Windows.Forms.ColumnHeader Discurso;
-        private System.Windows.Forms.ColumnHeader Interpelaciones;
-        private System.Windows.Forms.ColumnHeader Puntos;
     }
 }

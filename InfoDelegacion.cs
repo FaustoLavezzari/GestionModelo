@@ -54,6 +54,16 @@ namespace GestiónModelo
                         
             InterpelacionesRealizadas.Text =  delegacion.getInterpelaciones().ToString();
             InterpelacionesRespondidas.Text = delegacion.getPregResp().ToString();
+
+            ListViewValoraciones.Columns.Add("Puntaje", 60, HorizontalAlignment.Center);
+            Dictionary<string, float> valoraciones = delegacion.getValoracion().getValoraciones();
+            foreach(string motivo in valoraciones.Keys)
+            {
+                CargarValoracionEnListView(motivo, valoraciones[motivo]);
+            }
+
+            PuntajeTotal.Text = delegacion.getValoracion().getPuntajeTotal().ToString();
+
         }
         private void AbrirFormHija(object form_hija)
         {
@@ -99,14 +109,36 @@ namespace GestiónModelo
             return delegacion_en_estrado;
         }
 
-        /*public Label getLabelRespondidas()
-        {
-            return InterpelacionesRespondidas;
-        }*/
+        private void CargarValoracionEnListView(String motivo, float puntaje)
+        {            
+            ListViewItem valoracionItem = new ListViewItem(motivo);
+            valoracionItem.SubItems.Add(puntaje.ToString());
+            if (puntaje < 0)
+                valoracionItem.SubItems[0].ForeColor = Color.Red;
+            else
+                valoracionItem.SubItems[0].ForeColor = Color.Green;
+            ListViewValoraciones.Items.Add(valoracionItem);
 
-        public void refreshRespondidas()
+            MotivoIngresado.Text = null;
+            PuntajeIngresado.Value = 0;
+
+        }
+
+        private void Valorar(object sender, EventArgs e)
         {
-            InterpelacionesRespondidas.Refresh();
+            Dictionary<string, float> valoraciones = delegacion.getValoracion().getValoraciones();
+            string motivo = MotivoIngresado.Text;
+            float puntaje =(float) PuntajeIngresado.Value;
+            if (!valoraciones.ContainsKey(motivo))
+            {
+                delegacion.getValoracion().valorar(motivo, puntaje);
+            }
+            else
+            {
+                delegacion.getValoracion().valorar(motivo + " ", puntaje);
+            }
+            CargarValoracionEnListView(motivo, puntaje);
+            PuntajeTotal.Text = delegacion.getValoracion().getPuntajeTotal().ToString();
         }
     }
 }
