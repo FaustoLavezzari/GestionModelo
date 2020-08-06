@@ -57,13 +57,13 @@ namespace GestiónModelo
 
             ListViewValoraciones.Items.Clear();
             ListViewValoraciones.Columns.Add("Puntaje", 60, HorizontalAlignment.Center);
-            Dictionary<string, float> valoraciones = delegacion.getValoracion().getValoraciones();
-            foreach(string motivo in valoraciones.Keys)
+            List<Valoracion> valoraciones = delegacion.getValoraciones();
+            foreach(Valoracion valoracion in valoraciones)
             {
-                CargarValoracionEnListView(motivo, valoraciones[motivo]);
+                CargarValoracionEnListView(valoracion.getMotivo(), valoracion.getPuntos());
             }
 
-            PuntajeTotal.Text = delegacion.getValoracion().getPuntajeTotal().ToString();
+            PuntajeTotal.Text = delegacion.getPuntajeTotal().ToString();
 
         }
         private void AbrirFormHija(object form_hija)
@@ -126,20 +126,12 @@ namespace GestiónModelo
 
         private void Valorar(object sender, EventArgs e)
         {
-            Dictionary<string, float> valoraciones = delegacion.getValoracion().getValoraciones();
             string motivo = MotivoIngresado.Text.Trim();
             float puntaje =(float) PuntajeIngresado.Value;
-            if (!valoraciones.ContainsKey(motivo))
-            {
-                delegacion.getValoracion().valorar(motivo, puntaje);
-            }
-            else
-            {
-                delegacion.getValoracion().valorar(motivo + " ", puntaje);
-                ((PantallaPrincipal)ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
-            }
+            delegacion.Valorar(motivo, puntaje);
             CargarValoracionEnListView(motivo, puntaje);
-            PuntajeTotal.Text = delegacion.getValoracion().getPuntajeTotal().ToString();
+            ((PantallaPrincipal)ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
+            PuntajeTotal.Text = delegacion.getPuntajeTotal().ToString();
         }
     }
 }

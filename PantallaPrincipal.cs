@@ -135,7 +135,7 @@ namespace GestiónModelo
             if (sesion.getTopicoActivo().leyoDiscurso(delegacion) == true) { simb = "✓"; }
             listViewItem.SubItems.Add(simb);
             listViewItem.SubItems.Add(delegacion.getInterpelaciones().ToString());
-            listViewItem.SubItems.Add((delegacion.getValoracion().getPuntajeTotal()).ToString());
+            listViewItem.SubItems.Add((delegacion.getPuntajeTotal()).ToString());
             control.Items.Add(listViewItem);
         }
 

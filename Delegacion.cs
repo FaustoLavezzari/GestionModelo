@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
 using System.Resources;
+using System.Security.Policy;
 
 namespace GestiónModelo
 {
@@ -18,7 +19,7 @@ namespace GestiónModelo
         private int interpelaciones;
         private int pregResp;
         private bool asistencia;
-        Valoracion valoracion;
+        List <Valoracion> valoraciones;
 
         public Delegacion(String nombre, Image bandera)
         {
@@ -30,7 +31,7 @@ namespace GestiónModelo
             interpelaciones = 0;
             pregResp = 0;
             asistencia = false;
-            valoracion = new Valoracion();
+            valoraciones = new List<Valoracion>();
         }
         
         public void incrementarInterpelaciones() { interpelaciones++; }
@@ -39,6 +40,11 @@ namespace GestiónModelo
         //seters
 
         public void setAsistencia(bool a) { asistencia =a; }
+        public void Valorar(string motivo, float puntaje)
+        {
+            Valoracion valoracion = new Valoracion(motivo, puntaje);
+            valoraciones.Add(valoracion);
+        }
    
 
         //getters
@@ -47,7 +53,18 @@ namespace GestiónModelo
         public int getInterpelaciones() { return interpelaciones; }
         public int getPregResp() { return pregResp; }
         public bool getAsistencia() { return asistencia; }
-        public Valoracion getValoracion() { return valoracion; }
+        public List<Valoracion> getValoraciones() { return valoraciones; }
+
+        public float getPuntajeTotal()
+        {
+            float total = 0;
+            foreach(Valoracion valoracion in valoraciones)
+            {
+                total += valoracion.getPuntos();
+            }
+
+            return total;
+        }
 
         public Delegacion copiarDelegacion() 
         {
@@ -56,4 +73,28 @@ namespace GestiónModelo
         }
 
     }
+
+    public class Valoracion
+    {
+        private string motivo;
+        private float puntos;
+
+        public Valoracion(string motivo,float puntos)
+        {
+            this.motivo = motivo;
+            this.puntos = puntos;
+        }
+
+        public string getMotivo()
+        {
+            return motivo;
+        }
+
+        public float getPuntos()
+        {
+            return puntos;
+        }
+        
+    }
+
 }
