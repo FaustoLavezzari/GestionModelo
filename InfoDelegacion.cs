@@ -136,6 +136,7 @@ namespace GestiónModelo
             else
             {
                 delegacion.getValoracion().valorar(motivo + " ", puntaje);
+                ((PantallaPrincipal)ActiveForm).comboBox1_SelectedIndexChanged(sender, e);
             }
             CargarValoracionEnListView(motivo, puntaje);
             PuntajeTotal.Text = delegacion.getValoracion().getPuntajeTotal().ToString();
